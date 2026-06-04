@@ -3,281 +3,354 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Madosinc designs intelligent workflows, AI systems, and Notion-based operating structures for modern teams.">
-  <title>MADOSINC — AI Systems & Business Infrastructure</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Madosinc — Official Notion Solution Consultant. Design, implement, and scale structured workflows and digital systems for your organization.">
+  <title>Madosinc | Official Notion Solution Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header" id="top">
-    <div class="site-header__inner">
-      <a class="site-logo" href="#top">MADOSINC</a>
-
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#systems">Systems</a>
-        <span class="nav-dot" aria-hidden="true">·</span>
-        <a href="#solutions">Solutions</a>
-        <span class="nav-dot" aria-hidden="true">·</span>
-        <a href="#workspaces">Workspaces</a>
-        <span class="nav-dot" aria-hidden="true">·</span>
-        <a href="#case-studies">Case Studies</a>
-        <span class="nav-dot" aria-hidden="true">·</span>
-        <a href="#about">About</a>
-      </nav>
-
-      <a class="btn btn--ghost btn--header" href="#contact">Book a Call</a>
-
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
-        <span></span>
-      </label>
-    </div>
+  <header class="site-header" role="banner">
+    <nav class="nav container" aria-label="Primary">
+      <a class="nav__logo" href="#">Madosinc</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
-    <section class="hero section" aria-labelledby="hero-heading">
-      <div class="container container--narrow">
-        <h1 id="hero-heading" class="hero__title">Build Better Systems for Modern Work.</h1>
-        <p class="hero__subtext">
-          Madosinc designs intelligent workflows, AI systems, and Notion-based operating structures for teams that want clarity, speed, and scale.
-        </p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#systems">Explore Systems</a>
-          <a class="btn btn--secondary" href="#contact">Start a Project</a>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__inner">
+        <div class="hero__content fade-in">
+          <p class="eyebrow">Official Notion Solution Consultant</p>
+          <h1 id="hero-heading">Build Structured Systems with Notion.</h1>
+          <p class="hero__subtext">
+            Madosinc is an official Notion Solution Consultant helping organizations design, implement, and scale powerful workflows, systems, and digital operations.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">Book Consultation</a>
+            <a class="btn btn--secondary" href="#services">View Services</a>
+          </div>
+        </div>
+        <div class="hero__panel fade-in" aria-hidden="true">
+          <div class="system-preview">
+            <div class="system-preview__row">
+              <span class="system-preview__dot"></span>
+              <span class="system-preview__line system-preview__line--short"></span>
+            </div>
+            <div class="system-preview__block"></div>
+            <div class="system-preview__grid">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+            <div class="system-preview__row">
+              <span class="system-preview__line"></span>
+            </div>
+            <div class="system-preview__row">
+              <span class="system-preview__line system-preview__line--medium"></span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="product-thinking section reveal" id="systems" aria-labelledby="product-heading">
+    <section class="trust section--grey" aria-label="Trust indicators">
       <div class="container">
-        <h2 id="product-heading" class="section-title">We Don’t Build Pages. We Build Systems.</h2>
-        <div class="columns columns--3">
-          <article class="column-block">
-            <h3 class="column-block__title">Work Operating Systems</h3>
-            <p class="column-block__text">
-              Unified hubs where projects, people, and priorities live in one coherent structure—built for daily execution, not documentation theater.
-            </p>
-          </article>
-          <article class="column-block">
-            <h3 class="column-block__title">AI Automation Layers</h3>
-            <p class="column-block__text">
-              Intelligent pipelines that route data, trigger actions, and remove repetitive work—embedded directly into how your team already operates.
-            </p>
-          </article>
-          <article class="column-block">
-            <h3 class="column-block__title">Structured Knowledge Systems</h3>
-            <p class="column-block__text">
-              Searchable, linked, and maintained knowledge bases that scale with your organization and stay accurate over time.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="services section reveal" id="solutions" aria-labelledby="services-heading">
-      <div class="container container--narrow">
-        <h2 id="services-heading" class="section-title section-title--sm">Services</h2>
-        <ul class="block-list" role="list">
-          <li class="block-list__item">
-            <span class="block-list__label">AI Workflow Automation</span>
-            <span class="block-list__hint">End-to-end flows with human oversight built in</span>
+        <ul class="trust__grid">
+          <li class="trust__item fade-in">
+            <span class="trust__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </span>
+            <h3>Official Notion Consulting Partner</h3>
+            <p>Authorized to deliver certified Notion solution consulting for teams and enterprises.</p>
           </li>
-          <li class="block-list__item">
-            <span class="block-list__label">Notion Workspace Design</span>
-            <span class="block-list__hint">Operating structures your team will actually use</span>
+          <li class="trust__item fade-in">
+            <span class="trust__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+            </span>
+            <h3>Workflow Experts</h3>
+            <p>Deep expertise in mapping, designing, and operationalizing business workflows in Notion.</p>
           </li>
-          <li class="block-list__item">
-            <span class="block-list__label">CRM &amp; Database Systems</span>
-            <span class="block-list__hint">Relational data models tied to real workflows</span>
-          </li>
-          <li class="block-list__item">
-            <span class="block-list__label">Business OS Architecture</span>
-            <span class="block-list__hint">Company-wide systems that connect every function</span>
-          </li>
-          <li class="block-list__item">
-            <span class="block-list__label">Internal Tools</span>
-            <span class="block-list__hint">Lightweight apps for teams, not bloated platforms</span>
-          </li>
-          <li class="block-list__item">
-            <span class="block-list__label">API &amp; Integration Systems</span>
-            <span class="block-list__hint">Reliable connections between your critical stack</span>
+          <li class="trust__item fade-in">
+            <span class="trust__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </span>
+            <h3>Enterprise Implementation Experience</h3>
+            <p>Proven delivery for growing startups and established organizations at scale.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="transformation section reveal" id="workspaces" aria-labelledby="transform-heading">
+    <section class="services section" id="services" aria-labelledby="services-heading">
       <div class="container">
-        <h2 id="transform-heading" class="visually-hidden">Before and after transformation</h2>
-        <div class="split">
-          <div class="split__panel split__panel--before">
-            <h3 class="split__label">Before</h3>
-            <ul class="split__list" role="list">
-              <li>scattered tools</li>
-              <li>manual workflows</li>
-              <li>lost data</li>
-              <li>no structure</li>
-            </ul>
-          </div>
-          <div class="split__divider" aria-hidden="true"></div>
-          <div class="split__panel split__panel--after">
-            <h3 class="split__label">After</h3>
-            <ul class="split__list" role="list">
-              <li>unified system</li>
-              <li>automated workflows</li>
-              <li>structured knowledge</li>
-              <li>scalable operations</li>
-            </ul>
-          </div>
-        </div>
+        <header class="section__header fade-in">
+          <h2 id="services-heading">Services</h2>
+          <p class="section__lead">End-to-end consulting to design, build, and sustain your Notion operating system.</p>
+        </header>
+        <ul class="services__grid">
+          <li class="card fade-in"><h3>Workflow Discovery</h3><p>Map current processes, pain points, and opportunities before you build.</p></li>
+          <li class="card fade-in"><h3>Workflow Implementation</h3><p>Translate discovered workflows into structured, actionable Notion systems.</p></li>
+          <li class="card fade-in"><h3>Solution Implementation</h3><p>Deploy complete Notion solutions aligned to your business objectives.</p></li>
+          <li class="card fade-in"><h3>Integration Services</h3><p>Connect Notion with your existing tools, APIs, and data sources.</p></li>
+          <li class="card fade-in"><h3>Migration Services</h3><p>Move teams safely from legacy tools into a unified Notion workspace.</p></li>
+          <li class="card fade-in"><h3>Change Management</h3><p>Guide adoption with communication plans, rollout strategy, and stakeholder alignment.</p></li>
+          <li class="card fade-in"><h3>Custom Training</h3><p>Role-based sessions so every team member uses the system with confidence.</p></li>
+          <li class="card fade-in"><h3>Ongoing Support</h3><p>Continuous optimization, troubleshooting, and system evolution as you grow.</p></li>
+          <li class="card fade-in"><h3>Project Management</h3><p>Structured delivery with clear milestones, ownership, and accountability.</p></li>
+          <li class="card fade-in"><h3>Custom Templates</h3><p>Reusable, branded templates that standardize work across your organization.</p></li>
+        </ul>
       </div>
     </section>
 
-    <section class="showcase section reveal" id="case-studies" aria-labelledby="showcase-heading">
+    <section class="solutions section section--grey" id="solutions" aria-labelledby="solutions-heading">
       <div class="container">
-        <h2 id="showcase-heading" class="section-title section-title--sm">Case Studies</h2>
-        <div class="gallery">
-          <a class="gallery__item" href="#contact">
-            <h3 class="gallery__name">Northline Operations OS</h3>
-            <p class="gallery__category">Business OS Architecture</p>
-            <p class="gallery__result">Reduced handoffs by 40% across three departments in six weeks.</p>
-          </a>
-          <a class="gallery__item" href="#contact">
-            <h3 class="gallery__name">Helix Support Automation</h3>
-            <p class="gallery__category">AI Workflow Automation</p>
-            <p class="gallery__result">Automated 60% of tier-one tickets with maintained quality controls.</p>
-          </a>
-          <a class="gallery__item" href="#contact">
-            <h3 class="gallery__name">Atlas Knowledge Hub</h3>
-            <p class="gallery__category">Structured Knowledge Systems</p>
-            <p class="gallery__result">Centralized 12 legacy wikis into one searchable operating layer.</p>
-          </a>
-          <a class="gallery__item" href="#contact">
-            <h3 class="gallery__name">Meridian CRM Layer</h3>
-            <p class="gallery__category">CRM &amp; Database Systems</p>
-            <p class="gallery__result">Unified pipeline and delivery data for a 28-person revenue team.</p>
-          </a>
-          <a class="gallery__item" href="#contact">
-            <h3 class="gallery__name">Pulse Internal Tools</h3>
-            <p class="gallery__category">Internal Tools</p>
-            <p class="gallery__result">Shipped three role-specific dashboards without a full engineering hire.</p>
-          </a>
-          <a class="gallery__item" href="#contact">
-            <h3 class="gallery__name">Bridge Integration Stack</h3>
-            <p class="gallery__category">API &amp; Integration Systems</p>
-            <p class="gallery__result">Connected billing, support, and ops with sub-second sync reliability.</p>
-          </a>
-        </div>
+        <header class="section__header fade-in">
+          <h2 id="solutions-heading">Solutions &amp; Use Cases</h2>
+          <p class="section__lead">Structured systems we design and implement for organizations like yours.</p>
+        </header>
+        <ul class="cases__grid">
+          <li class="case-card fade-in">
+            <span class="case-card__tag">Startup</span>
+            <h3>Startup Workspace Setup</h3>
+            <p>Unified hub for docs, tasks, and team alignment from day one.</p>
+          </li>
+          <li class="case-card fade-in">
+            <span class="case-card__tag">Enterprise</span>
+            <h3>Corporate Knowledge System</h3>
+            <p>Centralized wikis, SOPs, and institutional knowledge at scale.</p>
+          </li>
+          <li class="case-card fade-in">
+            <span class="case-card__tag">Operations</span>
+            <h3>Project Management System</h3>
+            <p>Cross-functional project tracking with clear ownership and status.</p>
+          </li>
+          <li class="case-card fade-in">
+            <span class="case-card__tag">Sales</span>
+            <h3>CRM in Notion</h3>
+            <p>Pipeline, accounts, and activity tracking tailored to your sales motion.</p>
+          </li>
+          <li class="case-card fade-in">
+            <span class="case-card__tag">People</span>
+            <h3>HR System Setup</h3>
+            <p>Onboarding, directories, policies, and people operations in one place.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="process section reveal" aria-labelledby="process-heading">
-      <div class="container container--narrow">
-        <h2 id="process-heading" class="section-title section-title--sm">Process</h2>
-        <ol class="timeline">
-          <li class="timeline__item">
-            <span class="timeline__step">Discovery</span>
-            <p class="timeline__detail">Map tools, workflows, and constraints before anything is designed.</p>
+    <section class="process section" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <header class="section__header fade-in">
+          <h2 id="process-heading">How We Work</h2>
+          <p class="section__lead">A clear, repeatable methodology from discovery through long-term optimization.</p>
+        </header>
+        <ol class="process__flow">
+          <li class="process__step fade-in">
+            <span class="process__number">01</span>
+            <h3>Discovery</h3>
+            <p>Understand goals, stakeholders, and current state.</p>
           </li>
-          <li class="timeline__item">
-            <span class="timeline__step">Architecture Design</span>
-            <p class="timeline__detail">Define data models, permissions, and system boundaries with clarity.</p>
+          <li class="process__step fade-in">
+            <span class="process__number">02</span>
+            <h3>System Mapping</h3>
+            <p>Document workflows, data flows, and dependencies.</p>
           </li>
-          <li class="timeline__item">
-            <span class="timeline__step">System Building</span>
-            <p class="timeline__detail">Implement workspaces, databases, and interfaces in structured phases.</p>
+          <li class="process__step fade-in">
+            <span class="process__number">03</span>
+            <h3>Design &amp; Structuring</h3>
+            <p>Architect databases, views, and information hierarchy.</p>
           </li>
-          <li class="timeline__item">
-            <span class="timeline__step">Automation Setup</span>
-            <p class="timeline__detail">Layer AI and integrations where they remove real friction.</p>
+          <li class="process__step fade-in">
+            <span class="process__number">04</span>
+            <h3>Implementation</h3>
+            <p>Build, integrate, and validate the live system.</p>
           </li>
-          <li class="timeline__item">
-            <span class="timeline__step">Optimization</span>
-            <p class="timeline__detail">Refine adoption, performance, and governance as usage grows.</p>
+          <li class="process__step fade-in">
+            <span class="process__number">05</span>
+            <h3>Training</h3>
+            <p>Enable teams with practical, role-specific guidance.</p>
+          </li>
+          <li class="process__step fade-in">
+            <span class="process__number">06</span>
+            <h3>Support &amp; Optimization</h3>
+            <p>Iterate and refine as your business evolves.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="metrics section reveal" aria-label="Key metrics">
+    <section class="why section section--grey" aria-labelledby="why-heading">
       <div class="container">
-        <ul class="metrics__grid" role="list">
-          <li class="metrics__item">
-            <span class="metrics__value">120+</span>
-            <span class="metrics__label">Systems Built</span>
+        <header class="section__header fade-in">
+          <h2 id="why-heading">Why Madosinc</h2>
+          <p class="section__lead">Consulting built on structure, clarity, and long-term partnership.</p>
+        </header>
+        <ul class="why__grid">
+          <li class="why__item fade-in">
+            <h3>Structured thinking approach</h3>
+            <p>Every engagement starts with clear logic—how information flows, who owns what, and how work gets done.</p>
           </li>
-          <li class="metrics__item">
-            <span class="metrics__value">99%</span>
-            <span class="metrics__label">Client Satisfaction</span>
+          <li class="why__item fade-in">
+            <h3>Notion-certified methodology</h3>
+            <p>Official partner practices ensure solutions align with Notion best practices and platform capabilities.</p>
           </li>
-          <li class="metrics__item">
-            <span class="metrics__value">15+</span>
-            <span class="metrics__label">Countries</span>
+          <li class="why__item fade-in">
+            <h3>Business-first system design</h3>
+            <p>Technology serves outcomes. We design for how your organization actually operates.</p>
           </li>
-          <li class="metrics__item">
-            <span class="metrics__value">24/7</span>
-            <span class="metrics__label">System Support</span>
+          <li class="why__item fade-in">
+            <h3>Scalable workflows</h3>
+            <p>Systems that grow with headcount, complexity, and new business units without breaking.</p>
+          </li>
+          <li class="why__item fade-in">
+            <h3>Long-term support model</h3>
+            <p>We stay engaged beyond launch—optimization, training, and evolution as a trusted partner.</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="cta section reveal" aria-labelledby="cta-heading">
-      <div class="container container--narrow cta__inner">
-        <h2 id="cta-heading" class="cta__title">Your Business Deserves a Better System.</h2>
-        <div class="cta__actions">
-          <a class="btn btn--primary" href="#contact">Book a Consultation</a>
-          <a class="btn btn--secondary" href="#case-studies">View Examples</a>
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container about__inner">
+        <header class="section__header fade-in">
+          <h2 id="about-heading">About Madosinc</h2>
+        </header>
+        <div class="about__content fade-in">
+          <div class="about__block">
+            <h3>Our Mission</h3>
+            <p>
+              Madosinc exists to help businesses design, implement, and scale structured digital systems in Notion. We believe clarity in how work is organized directly improves productivity, alignment, and decision-making across every team.
+            </p>
+          </div>
+          <div class="about__block">
+            <h3>Consulting Philosophy</h3>
+            <p>
+              We partner with leaders who want more than templates—they want operating systems. Our consulting is collaborative, transparent, and grounded in measurable outcomes. We listen first, design second, and implement with discipline.
+            </p>
+          </div>
+          <div class="about__block">
+            <h3>System-First Approach</h3>
+            <p>
+              Before databases and dashboards, we define the system: inputs, processes, outputs, and ownership. This foundation ensures your Notion workspace remains coherent as teams, tools, and priorities change. Structure is not constraint—it is the freedom to scale with confidence.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="contact section reveal" id="contact" aria-labelledby="contact-heading">
-      <div class="container container--narrow">
-        <h2 id="contact-heading" class="section-title section-title--sm">Contact</h2>
-        <form class="contact-form" action="#" method="post">
-          <div class="field">
-            <label class="field__label" for="name">Name</label>
-            <input class="field__input" type="text" id="name" name="name" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label class="field__label" for="email">Email</label>
-            <input class="field__input" type="email" id="email" name="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label class="field__label" for="details">Project Details</label>
-            <textarea class="field__input field__input--area" id="details" name="details" rows="4" required></textarea>
-          </div>
-          <button class="btn btn--primary" type="submit">Send Message</button>
-        </form>
+    <section class="cta section section--grey" aria-labelledby="cta-heading">
+      <div class="container cta__inner fade-in">
+        <h2 id="cta-heading">Let&rsquo;s Build Your System Together.</h2>
+        <p>Schedule a consultation to discuss your workflows, goals, and how Madosinc can help transform your digital operations.</p>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="#contact">Schedule Call</a>
+          <a class="btn btn--secondary" href="mailto:contact@madosinc.com">Contact Now</a>
+        </div>
       </div>
     </section>
 
-    <section class="about section reveal" id="about" aria-labelledby="about-heading">
-      <div class="container container--narrow">
-        <h2 id="about-heading" class="section-title section-title--sm">About</h2>
-        <p class="about__text">
-          Madosinc is an AI systems and business infrastructure studio. We design operating environments—not marketing sites—so teams can work with clarity, intelligence, and structure at scale.
-        </p>
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact__inner">
+        <header class="section__header fade-in">
+          <h2 id="contact-heading">Contact</h2>
+          <p class="section__lead">
+            Reach us at <a href="mailto:contact@madosinc.com">contact@madosinc.com</a> or send a message below.
+          </p>
+        </header>
+        <form
+          class="contact__form fade-in"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <!-- Replace YOUR_FORM_ID with your Formspree endpoint: https://formspree.io/ -->
+          <div class="form-row">
+            <label for="full-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="full-name" name="name" required autocomplete="name" placeholder="Jane Smith">
+          </div>
+          <div class="form-row">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@company.com">
+          </div>
+          <div class="form-row">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" autocomplete="organization" placeholder="Your organization">
+          </div>
+          <div class="form-row">
+            <label for="project-type">Project Type</label>
+            <select id="project-type" name="project_type">
+              <option value="">Select a project type</option>
+              <option value="workflow-discovery">Workflow Discovery</option>
+              <option value="implementation">Implementation</option>
+              <option value="integration">Integration</option>
+              <option value="migration">Migration</option>
+              <option value="training">Training</option>
+              <option value="ongoing-support">Ongoing Support</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project and goals"></textarea>
+          </div>
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__brand">
-        <p class="site-footer__name">MADOSINC</p>
-        <p class="site-footer__tagline">AI Systems &amp; Business Infrastructure</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="footer__logo" href="#">Madosinc</a>
+        <p class="footer__tagline">Official Notion Solution Consultant</p>
+        <a href="mailto:contact@madosinc.com">contact@madosinc.com</a>
       </div>
-      <nav class="site-footer__links" aria-label="Footer">
-        <a href="#">Privacy</a>
-        <span aria-hidden="true">·</span>
-        <a href="#">Terms</a>
-        <span aria-hidden="true">·</span>
-        <a href="#contact">Contact</a>
+      <nav class="footer__nav" aria-label="Footer">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
+      <div class="footer__social">
+        <span class="footer__social-label">Connect</span>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; <span id="year"></span> Madosinc. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
