@@ -150,21 +150,25 @@ h3 {
 
 .brand-logo {
   width: auto;
-  height: 28px;
-  max-width: 140px;
+  height: auto;
+  max-width: 100%;
   object-fit: contain;
 }
 
-.brand-logo--hero {
-  height: 32px;
-  max-width: 160px;
-  margin-bottom: 1.25rem;
+.brand-logo--nav {
+  height: 36px;
+  max-width: 168px;
 }
 
-.brand-logo--about {
-  height: 36px;
-  max-width: 180px;
-  margin-bottom: 1rem;
+.brand-logo--hero {
+  height: clamp(40px, 6vw, 56px);
+  max-width: min(220px, 100%);
+}
+
+.brand-logo--full {
+  height: clamp(48px, 8vw, 72px);
+  max-width: min(320px, 90vw);
+  margin-inline: auto;
 }
 
 .visually-hidden {
@@ -292,7 +296,11 @@ h3 {
 
 .section__header {
   max-width: 36rem;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.section__header--center {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .section__lead {
@@ -318,9 +326,13 @@ h3 {
 
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
+}
+
+.hero__brand {
+  margin-bottom: 1rem;
 }
 
 .hero__subtext {
@@ -340,18 +352,22 @@ h3 {
 .hero__panel {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.hero__panel-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-text-soft);
 }
 
 .hero__cert-preview {
   width: 100%;
-  max-width: 420px;
   height: auto;
-  padding: 1rem;
-  background: var(--color-grey-light);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
 }
 
 .system-preview--fallback {
@@ -419,21 +435,37 @@ h3 {
   border-radius: 4px;
 }
 
-/* Certifications */
-.certifications__figure {
+/* Shared media frames (badges, clients) */
+.media-frame {
   margin: 0;
-  padding: 2rem;
-  background: var(--color-grey-light);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: 12px;
-  overflow-x: auto;
+  text-align: center;
 }
 
-.certifications__img {
+.media-frame--hero {
+  padding: 1.25rem;
+}
+
+.media-img {
   width: 100%;
-  min-width: 640px;
   height: auto;
   margin-inline: auto;
+  display: block;
+}
+
+.media-img--badges {
+  max-width: 1000px;
+}
+
+.media-img--clients {
+  max-width: 1100px;
+}
+
+.certifications.section {
+  background: var(--color-grey-light);
 }
 
 /* Integrations */
@@ -472,27 +504,8 @@ h3 {
 }
 
 /* Clients */
-.clients__figure {
-  margin: 0;
-  padding: 2rem 1.5rem;
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  overflow-x: auto;
-}
-
-.clients__img {
-  width: 100%;
-  min-width: 720px;
-  height: auto;
-  margin-inline: auto;
-}
-
-.clients__note {
-  margin-top: 1.5rem;
-  text-align: center;
-  font-size: 0.9375rem;
-  color: var(--color-text-soft);
+.clients.section {
+  padding-block: var(--section-padding);
 }
 
 /* Team */
@@ -552,12 +565,6 @@ h3 {
   font-size: 0.9375rem;
   color: var(--color-text-soft);
   line-height: 1.6;
-}
-
-.about__brand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 /* Trust */
@@ -770,9 +777,13 @@ h3 {
 /* Contact form */
 .contact__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 3.5rem);
   align-items: start;
+}
+
+.contact__inner .section__header {
+  max-width: none;
 }
 
 .contact__form {
@@ -847,21 +858,39 @@ h3 {
 
 .footer__inner {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
   padding-bottom: 2rem;
+  align-items: start;
 }
 
-.footer__logo {
-  display: inline-block;
+.footer__brand-name {
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.footer__closing {
+  padding-block: 2.5rem 2rem;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__closing-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__closing-logo {
+  display: inline-flex;
   line-height: 0;
-  margin-bottom: 0.25rem;
+  transition: opacity var(--transition);
 }
 
-.footer__tagline {
-  margin: 0.25rem 0 0.75rem;
-  font-size: 0.875rem;
-  color: var(--color-text-soft);
+.footer__closing-logo:hover {
+  opacity: 0.85;
 }
 
 .footer__brand a[href^="mailto"] {
@@ -1016,12 +1045,8 @@ h3 {
     gap: 1.5rem;
   }
 
-  .certifications__img {
-    min-width: 520px;
-  }
-
-  .clients__img {
-    min-width: 560px;
+  .media-frame {
+    padding: 1rem;
   }
 }
 

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="images/madosinc-logo.svg" type="image/svg+xml">
+  <link rel="icon" href="images/madosinc-logo.png" type="image/png">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -17,7 +17,7 @@
   <header class="site-header" role="banner">
     <nav class="nav container" aria-label="Primary">
       <a class="nav__logo" href="#">
-        <img src="images/madosinc-logo.png" alt="" width="140" height="32" class="brand-logo" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
+        <img src="images/madosinc-logo.png" alt="" width="168" height="40" class="brand-logo brand-logo--nav" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
         <span class="visually-hidden">Madosinc</span>
       </a>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
@@ -42,7 +42,9 @@
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero__inner">
         <div class="hero__content fade-in">
-          <img src="images/madosinc-logo.png" alt="" width="160" height="36" class="brand-logo brand-logo--hero" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
+          <div class="hero__brand">
+            <img src="images/madosinc-logo.png" alt="Madosinc" width="220" height="52" class="brand-logo brand-logo--hero" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
+          </div>
           <p class="eyebrow">Official Notion Solution Consultant</p>
           <h1 id="hero-heading">Build Structured Systems with Notion.</h1>
           <p class="hero__subtext">
@@ -54,14 +56,17 @@
           </div>
         </div>
         <div class="hero__panel fade-in">
-          <img
-            src="images/notion-certifications.png"
-            alt="Official Notion certification and partner badges"
-            class="hero__cert-preview"
-            width="600"
-            height="140"
-            loading="eager"
-          >
+          <p class="hero__panel-label">Officially certified by Notion</p>
+          <figure class="media-frame media-frame--hero">
+            <img
+              src="images/notion-certifications.png"
+              alt="Official Notion Academy, Certified Admin, Service Specialist, and Consulting Partner badges"
+              class="hero__cert-preview"
+              width="640"
+              height="160"
+              loading="eager"
+            >
+          </figure>
         </div>
       </div>
     </section>
@@ -73,8 +78,8 @@
             <span class="trust__icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             </span>
-            <h3>Official Notion Consulting Partner</h3>
-            <p>Authorized to deliver certified Notion solution consulting for teams and enterprises.</p>
+            <h3>Officially Certified by Notion</h3>
+            <p>Notion Consulting Partner with Academy, Admin, and Service Specialist credentials.</p>
           </li>
           <li class="trust__item fade-in">
             <span class="trust__icon" aria-hidden="true">
@@ -97,17 +102,17 @@
     <section class="certifications section" id="certifications" aria-labelledby="certifications-heading">
       <div class="container">
         <header class="section__header section__header--center fade-in">
-          <h2 id="certifications-heading">Notion Certification</h2>
-          <p class="section__lead">Officially certified by Notion — Academy, Admin, Service Specialist, and Consulting Partner credentials.</p>
+          <h2 id="certifications-heading">Official Notion Certification</h2>
+          <p class="section__lead">Officially certified by Notion — Academy Essentials through Advanced, Workflows, AI, Certified Admin, Service Specialist, and Consulting Partner.</p>
         </header>
-        <figure class="certifications__figure fade-in">
+        <figure class="media-frame fade-in">
           <img
             src="images/notion-certifications.png"
-            alt="Notion Academy Essentials, Advanced, Workflows, AI, Certified Admin, Service Specialist, and Consulting Partner badges"
+            alt="Official Notion certification badges: Academy Essentials, Advanced, Workflows, AI, Certified Admin, Service Specialist, and Consulting Partner"
             width="1200"
             height="280"
             loading="lazy"
-            class="certifications__img"
+            class="media-img media-img--badges"
           >
         </figure>
       </div>
@@ -134,7 +139,7 @@
       </div>
     </section>
 
-    <section class="integrations section section--grey" id="integrations" aria-labelledby="integrations-heading">
+    <section class="integrations section" id="integrations" aria-labelledby="integrations-heading">
       <div class="container">
         <header class="section__header section__header--center fade-in">
           <h2 id="integrations-heading">Integrations &amp; Connected Systems</h2>
@@ -245,20 +250,19 @@
     <section class="clients section" id="clients" aria-labelledby="clients-heading">
       <div class="container">
         <header class="section__header section__header--center fade-in">
-          <h2 id="clients-heading">Our Clients</h2>
-          <p class="section__lead">Trusted by organizations across government, advisory, billing, and professional services — and many others.</p>
+          <h2 id="clients-heading">Serving Clients Worldwide</h2>
+          <p class="section__lead">Trusted by government, advisory, construction, medical billing, and bookkeeping organizations — plus startups and enterprises globally.</p>
         </header>
-        <figure class="clients__figure fade-in">
+        <figure class="media-frame fade-in">
           <img
             src="images/clients.png"
-            alt="Client organizations including Office of the President of Bangladesh, Dimond Billing Solutions, Metrix Advisory, Host Bookkeeping Systems, and others"
-            width="1100"
-            height="200"
+            alt="Clients include Bangladesh Government, Dimond Billing Solution, Aquamarine Projects, Metrix Advisory, Host, and 120 plus completed projects"
+            width="1200"
+            height="320"
             loading="lazy"
-            class="clients__img"
+            class="media-img media-img--clients"
           >
         </figure>
-        <p class="clients__note fade-in">Plus startups, enterprises, and teams building structured Notion systems worldwide.</p>
       </div>
     </section>
 
@@ -327,10 +331,8 @@
     <section class="about section section--grey" id="about" aria-labelledby="about-heading">
       <div class="container about__inner">
         <header class="section__header fade-in">
-          <div class="about__brand">
-            <img src="images/madosinc-logo.png" alt="" width="180" height="40" class="brand-logo brand-logo--about" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
-            <h2 id="about-heading">About Madosinc</h2>
-          </div>
+          <h2 id="about-heading">About Madosinc</h2>
+          <p class="section__lead">Professional Notion consulting built on structure, clarity, and long-term partnership.</p>
         </header>
         <div class="about__content fade-in">
           <div class="about__block">
@@ -420,11 +422,7 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a class="footer__logo" href="#">
-          <img src="images/madosinc-logo.png" alt="" width="140" height="32" class="brand-logo" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
-          <span class="visually-hidden">Madosinc</span>
-        </a>
-        <p class="footer__tagline">Official Notion Solution Consultant</p>
+        <p class="footer__brand-name">Madosinc</p>
         <a href="mailto:contact@madosinc.com">contact@madosinc.com</a>
       </div>
       <nav class="footer__nav" aria-label="Footer">
@@ -453,6 +451,20 @@
             </a>
           </li>
         </ul>
+      </div>
+    </div>
+    <div class="footer__closing">
+      <div class="container footer__closing-inner fade-in">
+        <a class="footer__closing-logo" href="#">
+          <img
+            src="images/madosinc-logo-full.png"
+            alt="Madosinc — Official Notion Solution Consultant"
+            width="280"
+            height="72"
+            class="brand-logo brand-logo--full"
+            onerror="this.onerror=null;this.src='images/madosinc-logo-full.svg';"
+          >
+        </a>
       </div>
     </div>
     <div class="footer__bottom container">

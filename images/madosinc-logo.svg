@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 32" role="img" aria-label="Madosinc">
-  <text x="0" y="24" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" letter-spacing="-0.04em" fill="#111827">Madosinc</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" role="img" aria-label="Madosinc">
+  <rect x="0" y="4" width="32" height="32" rx="6" fill="#111827"/>
+  <text x="16" y="26" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff">M</text>
+  <text x="44" y="27" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="700" letter-spacing="-0.04em" fill="#111827">Madosinc</text>
 </svg>
