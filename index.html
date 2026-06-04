@@ -9,13 +9,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/madosinc-logo.svg" type="image/svg+xml">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" role="banner">
     <nav class="nav container" aria-label="Primary">
-      <a class="nav__logo" href="#">Madosinc</a>
+      <a class="nav__logo" href="#">
+        <img src="images/madosinc-logo.png" alt="" width="140" height="32" class="brand-logo" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
+        <span class="visually-hidden">Madosinc</span>
+      </a>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
         <span class="nav__toggle-bar" aria-hidden="true"></span>
         <span class="nav__toggle-bar" aria-hidden="true"></span>
@@ -25,6 +29,9 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#solutions">Solutions</a></li>
         <li><a href="#process">Process</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#team">Team</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -35,6 +42,7 @@
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero__inner">
         <div class="hero__content fade-in">
+          <img src="images/madosinc-logo.png" alt="" width="160" height="36" class="brand-logo brand-logo--hero" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
           <p class="eyebrow">Official Notion Solution Consultant</p>
           <h1 id="hero-heading">Build Structured Systems with Notion.</h1>
           <p class="hero__subtext">
@@ -45,24 +53,15 @@
             <a class="btn btn--secondary" href="#services">View Services</a>
           </div>
         </div>
-        <div class="hero__panel fade-in" aria-hidden="true">
-          <div class="system-preview">
-            <div class="system-preview__row">
-              <span class="system-preview__dot"></span>
-              <span class="system-preview__line system-preview__line--short"></span>
-            </div>
-            <div class="system-preview__block"></div>
-            <div class="system-preview__grid">
-              <span></span><span></span><span></span>
-              <span></span><span></span><span></span>
-            </div>
-            <div class="system-preview__row">
-              <span class="system-preview__line"></span>
-            </div>
-            <div class="system-preview__row">
-              <span class="system-preview__line system-preview__line--medium"></span>
-            </div>
-          </div>
+        <div class="hero__panel fade-in">
+          <img
+            src="images/notion-certifications.png"
+            alt="Official Notion certification and partner badges"
+            class="hero__cert-preview"
+            width="600"
+            height="140"
+            loading="eager"
+          >
         </div>
       </div>
     </section>
@@ -95,6 +94,25 @@
       </div>
     </section>
 
+    <section class="certifications section" id="certifications" aria-labelledby="certifications-heading">
+      <div class="container">
+        <header class="section__header section__header--center fade-in">
+          <h2 id="certifications-heading">Notion Certification</h2>
+          <p class="section__lead">Officially certified by Notion — Academy, Admin, Service Specialist, and Consulting Partner credentials.</p>
+        </header>
+        <figure class="certifications__figure fade-in">
+          <img
+            src="images/notion-certifications.png"
+            alt="Notion Academy Essentials, Advanced, Workflows, AI, Certified Admin, Service Specialist, and Consulting Partner badges"
+            width="1200"
+            height="280"
+            loading="lazy"
+            class="certifications__img"
+          >
+        </figure>
+      </div>
+    </section>
+
     <section class="services section" id="services" aria-labelledby="services-heading">
       <div class="container">
         <header class="section__header fade-in">
@@ -113,6 +131,37 @@
           <li class="card fade-in"><h3>Project Management</h3><p>Structured delivery with clear milestones, ownership, and accountability.</p></li>
           <li class="card fade-in"><h3>Custom Templates</h3><p>Reusable, branded templates that standardize work across your organization.</p></li>
         </ul>
+      </div>
+    </section>
+
+    <section class="integrations section section--grey" id="integrations" aria-labelledby="integrations-heading">
+      <div class="container">
+        <header class="section__header section__header--center fade-in">
+          <h2 id="integrations-heading">Integrations &amp; Connected Systems</h2>
+          <p class="section__lead">Notion as your central operating system — connected to the tools your teams already use.</p>
+        </header>
+        <div class="integrations__grid">
+          <figure class="integrations__card fade-in">
+            <img
+              src="images/integrations-enterprise.png"
+              alt="Notion connected to Google Drive, Salesforce, Slack, Gmail, Dropbox, QuickBooks, Outlook, and more"
+              width="800"
+              height="500"
+              loading="lazy"
+            >
+            <figcaption>Enterprise platforms &amp; business tools</figcaption>
+          </figure>
+          <figure class="integrations__card fade-in">
+            <img
+              src="images/integrations-ecosystem.png"
+              alt="Notion hub with GitHub, Slack, Figma, Gmail, Linear, HubSpot, Intercom, and other app integrations"
+              width="800"
+              height="500"
+              loading="lazy"
+            >
+            <figcaption>Modern product &amp; workflow ecosystem</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -193,6 +242,26 @@
       </div>
     </section>
 
+    <section class="clients section" id="clients" aria-labelledby="clients-heading">
+      <div class="container">
+        <header class="section__header section__header--center fade-in">
+          <h2 id="clients-heading">Our Clients</h2>
+          <p class="section__lead">Trusted by organizations across government, advisory, billing, and professional services — and many others.</p>
+        </header>
+        <figure class="clients__figure fade-in">
+          <img
+            src="images/clients.png"
+            alt="Client organizations including Office of the President of Bangladesh, Dimond Billing Solutions, Metrix Advisory, Host Bookkeeping Systems, and others"
+            width="1100"
+            height="200"
+            loading="lazy"
+            class="clients__img"
+          >
+        </figure>
+        <p class="clients__note fade-in">Plus startups, enterprises, and teams building structured Notion systems worldwide.</p>
+      </div>
+    </section>
+
     <section class="why section section--grey" aria-labelledby="why-heading">
       <div class="container">
         <header class="section__header fade-in">
@@ -224,10 +293,44 @@
       </div>
     </section>
 
-    <section class="about section" id="about" aria-labelledby="about-heading">
+    <section class="team section" id="team" aria-labelledby="team-heading">
+      <div class="container">
+        <header class="section__header section__header--center fade-in">
+          <h2 id="team-heading">Leadership Team</h2>
+          <p class="section__lead">Notion Certified Consultants and co-founders leading every engagement.</p>
+        </header>
+        <ul class="team__grid">
+          <li class="team-card fade-in">
+            <div class="team-card__photo">
+              <img src="images/hammad-hassan.png" alt="Portrait of Hammad Hassan" width="400" height="500" loading="lazy">
+            </div>
+            <div class="team-card__info">
+              <h3>Hammad Hassan</h3>
+              <p class="team-card__role">Notion Certified Consultant · Co-Founder</p>
+              <p class="team-card__bio">Leads system architecture, enterprise implementation, and structured workflow design for client organizations.</p>
+            </div>
+          </li>
+          <li class="team-card fade-in">
+            <div class="team-card__photo">
+              <img src="images/ahmad-hassan.png" alt="Portrait of Ahmad Hassan" width="400" height="500" loading="lazy">
+            </div>
+            <div class="team-card__info">
+              <h3>Ahmad Hassan</h3>
+              <p class="team-card__role">Notion Certified Consultant · Co-Founder</p>
+              <p class="team-card__bio">Drives solution delivery, client success, and hands-on Notion consulting across discovery through support.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about section section--grey" id="about" aria-labelledby="about-heading">
       <div class="container about__inner">
         <header class="section__header fade-in">
-          <h2 id="about-heading">About Madosinc</h2>
+          <div class="about__brand">
+            <img src="images/madosinc-logo.png" alt="" width="180" height="40" class="brand-logo brand-logo--about" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
+            <h2 id="about-heading">About Madosinc</h2>
+          </div>
         </header>
         <div class="about__content fade-in">
           <div class="about__block">
@@ -317,7 +420,10 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a class="footer__logo" href="#">Madosinc</a>
+        <a class="footer__logo" href="#">
+          <img src="images/madosinc-logo.png" alt="" width="140" height="32" class="brand-logo" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
+          <span class="visually-hidden">Madosinc</span>
+        </a>
         <p class="footer__tagline">Official Notion Solution Consultant</p>
         <a href="mailto:contact@madosinc.com">contact@madosinc.com</a>
       </div>
@@ -326,6 +432,9 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#solutions">Solutions</a></li>
           <li><a href="#process">Process</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#team">Team</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
