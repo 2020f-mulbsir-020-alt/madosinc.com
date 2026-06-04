@@ -316,6 +316,7 @@ h3 {
   letter-spacing: 0.06em;
   color: var(--color-text-soft);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* Hero */
@@ -325,21 +326,28 @@ h3 {
 }
 
 .hero__inner {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__content {
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .hero__brand {
+  display: flex;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
 .hero__subtext {
   margin-top: 1.25rem;
+  margin-inline: auto;
   font-size: 1.125rem;
   color: var(--color-text-soft);
-  max-width: 32rem;
+  max-width: 36rem;
 }
 
 .hero__actions {
@@ -347,27 +355,7 @@ h3 {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 2rem;
-}
-
-.hero__panel {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.75rem;
-}
-
-.hero__panel-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--color-text-soft);
-}
-
-.hero__cert-preview {
-  width: 100%;
-  height: auto;
+  justify-content: center;
 }
 
 .system-preview--fallback {
@@ -978,18 +966,6 @@ h3 {
   .team__grid {
     grid-template-columns: 1fr;
     max-width: 420px;
-  }
-
-  .hero__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__panel {
-    order: -1;
-  }
-
-  .system-preview {
-    max-width: 100%;
   }
 }
 
