@@ -182,41 +182,56 @@ textarea {
   gap: 2rem;
 }
 
-.brand-logo {
-  flex-shrink: 0;
-  display: block;
-  border-radius: 4px;
-}
+/* Brand Lockup — Logo + Madosinc row
+   -------------------------------------------------------------------------- */
 
-.header__brand {
+.brand-lockup {
   display: flex;
   align-items: center;
-  gap: 0.875rem;
+  gap: 0.75rem;
   transition: opacity var(--transition-fast);
 }
 
-.header__brand:hover {
+.brand-lockup:hover {
   opacity: 0.85;
 }
 
-.header__brand-text {
+.brand-lockup__logo {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.brand-lockup__text {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.125rem;
 }
 
-.header__brand-name {
-  font-size: 0.8125rem;
+.brand-lockup__name {
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.04em;
   color: var(--color-text);
+  line-height: 1.2;
 }
 
-.header__label {
-  font-size: 0.625rem;
+.brand-lockup__label {
+  font-size: 0.5625rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+.brand-lockup--footer .brand-lockup__logo {
+  width: 32px;
+  height: 32px;
+}
+
+.brand-lockup--footer .brand-lockup__name {
+  font-size: 0.9375rem;
 }
 
 .header__nav {
@@ -275,6 +290,31 @@ textarea {
 
 .hero__inner {
   max-width: 52rem;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero__brand img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+
+.hero__brand-name {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
 }
 
 .hero h1 {
@@ -292,6 +332,7 @@ textarea {
   color: var(--color-text-secondary);
   max-width: 42rem;
   margin-bottom: 2.5rem;
+  margin-inline: auto;
 }
 
 .hero__badges {
@@ -299,6 +340,7 @@ textarea {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 2.75rem;
+  justify-content: center;
 }
 
 .hero__badges li {
@@ -316,6 +358,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
 /* Buttons
@@ -365,12 +408,27 @@ textarea {
 
 .section__header {
   margin-bottom: 3.5rem;
-  max-width: 36rem;
+  max-width: 42rem;
+}
+
+.section--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .section__header--center {
   text-align: center;
   margin-inline: auto;
+}
+
+.section__intro {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 40rem;
+  margin-top: 1rem;
 }
 
 .section__header h2,
@@ -387,11 +445,9 @@ textarea {
 /* About
    -------------------------------------------------------------------------- */
 
-.about__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2.5rem, 5vw, 5rem);
-  align-items: center;
+.about__content {
+  max-width: 42rem;
+  margin-bottom: 3rem;
 }
 
 .about__text {
@@ -404,35 +460,128 @@ textarea {
   margin-bottom: 0;
 }
 
-.about__panel {
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  padding: clamp(2rem, 4vw, 3rem);
-}
-
-.about__panel-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--color-border);
-}
-
-.about__panel-grid span {
+.about__pillars {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 2.5rem 1.5rem;
-  background: var(--color-surface);
-  font-size: 0.75rem;
+  gap: 0.75rem;
+  max-width: 36rem;
+}
+
+.about__pillars span {
+  font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-accent);
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
   transition: background var(--transition-fast);
 }
 
-.about__panel-grid span:hover {
+.about__pillars span:hover {
   background: var(--color-hover-glow);
+}
+
+/* Offerings — Highlighted
+   -------------------------------------------------------------------------- */
+
+.section--highlight {
+  position: relative;
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.offering-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 2.25rem 2rem;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.offering-card--featured {
+  border-color: rgba(214, 211, 204, 0.25);
+}
+
+.offering-card:hover {
+  background: #1e1e1e;
+  border-color: rgba(214, 211, 204, 0.4);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.offering-card__tag {
+  display: inline-block;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.25rem;
+  padding: 0.375rem 0.625rem;
+  border: 1px solid var(--color-border);
+}
+
+.offering-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.01em;
+}
+
+.offering-card > p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.offering-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.offering-card__list li {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.offering-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+
+.services__budget {
+  margin-top: 2.5rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.services__budget strong {
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
 /* Services Grid
@@ -444,6 +593,8 @@ textarea {
   gap: 1px;
   background: var(--color-border);
   border: 1px solid var(--color-border);
+  width: 100%;
+  text-align: left;
 }
 
 .service-card {
@@ -569,6 +720,118 @@ textarea {
   line-height: 1.4;
 }
 
+.metric--highlight .metric__value {
+  color: var(--color-accent);
+}
+
+/* Reviews
+   -------------------------------------------------------------------------- */
+
+.reviews__score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 1.25rem;
+}
+
+.reviews__rating {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.reviews__meta {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  width: 100%;
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.review-card {
+  background: var(--color-surface);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: background var(--transition-fast);
+}
+
+.review-card:hover {
+  background: #1e1e1e;
+}
+
+.review-card__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.01em;
+}
+
+.review-card blockquote {
+  margin: 0;
+  flex: 1;
+}
+
+.review-card blockquote p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.review-card blockquote p::before {
+  content: "\201C";
+  color: var(--color-accent);
+}
+
+.review-card footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.review-card cite {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--color-text);
+}
+
+.review-card time {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.reviews__source {
+  margin-top: 2rem;
+  font-size: 0.8125rem;
+}
+
+.reviews__source a {
+  color: var(--color-accent);
+  letter-spacing: 0.04em;
+  transition: opacity var(--transition-fast);
+}
+
+.reviews__source a:hover {
+  opacity: 0.75;
+}
+
 /* Partnership
    -------------------------------------------------------------------------- */
 
@@ -580,6 +843,7 @@ textarea {
 
 .partnership__content {
   max-width: 42rem;
+  text-align: center;
 }
 
 .partnership__text {
@@ -598,6 +862,7 @@ textarea {
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   overflow: hidden;
+  width: 100%;
 }
 
 .partnership__badges img {
@@ -606,50 +871,13 @@ textarea {
   object-fit: contain;
 }
 
-/* Case Studies
-   -------------------------------------------------------------------------- */
-
-.cases-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--color-border);
-  border: 1px solid var(--color-border);
-}
-
-.case-card {
-  background: var(--color-surface);
-  padding: 2.25rem 2rem;
-  transition:
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
-}
-
-.case-card:hover {
-  background: #1e1e1e;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-
-.case-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-text);
-  margin-bottom: 0.875rem;
-  letter-spacing: 0.01em;
-}
-
-.case-card p {
-  font-size: 0.875rem;
-  line-height: 1.7;
-  color: var(--color-text-muted);
-}
-
 /* Contact
    -------------------------------------------------------------------------- */
 
 .contact__header {
   margin-bottom: 3rem;
   max-width: 36rem;
+  text-align: center;
 }
 
 .contact__form {
@@ -657,6 +885,76 @@ textarea {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   max-width: 48rem;
+  width: 100%;
+  text-align: left;
+}
+
+/* Team Flyer
+   -------------------------------------------------------------------------- */
+
+.team-flyer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.team-flyer__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2rem, 4vw, 3rem);
+  width: 100%;
+  max-width: 56rem;
+}
+
+.founder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  overflow: hidden;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.founder-card:hover {
+  background: #1e1e1e;
+  border-color: rgba(214, 211, 204, 0.25);
+}
+
+.founder-card__photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.founder-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.founder-card__info {
+  padding: 2rem 1.5rem 2.25rem;
+  width: 100%;
+}
+
+.founder-card__info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.founder-card__role {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
 }
 
 .form-field {
@@ -705,38 +1003,18 @@ textarea {
 }
 
 .footer__inner {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto;
-  gap: 2rem 3rem;
-  align-items: start;
-}
-
-.footer__brand {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.875rem;
-}
-
-.footer__name {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  color: var(--color-text);
-  margin-bottom: 0.375rem;
-}
-
-.footer__tagline {
-  font-size: 0.625rem;
-  letter-spacing: 0.08em;
-  color: var(--color-text-muted);
+  text-align: center;
+  gap: 2rem;
 }
 
 .footer__nav {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem 2rem;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .footer__nav a {
@@ -772,11 +1050,11 @@ textarea {
 }
 
 .footer__copy {
-  grid-column: 1 / -1;
   font-size: 0.75rem;
   color: var(--color-text-muted);
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-border);
+  width: 100%;
 }
 
 /* Responsive — Tablet
@@ -802,6 +1080,16 @@ textarea {
 
   .partnership__badges {
     padding: 1.25rem;
+  }
+
+  .offerings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-flyer__grid {
+    grid-template-columns: 1fr;
+    max-width: 22rem;
+    margin-inline: auto;
   }
 }
 
@@ -861,14 +1149,6 @@ textarea {
     font-size: 0.8125rem;
   }
 
-  .about__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about__panel {
-    order: -1;
-  }
-
   .process-timeline {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -890,21 +1170,10 @@ textarea {
     min-width: 2rem;
   }
 
-  .cases-grid {
-    grid-template-columns: 1fr;
-  }
-
   .contact__form {
     grid-template-columns: 1fr;
   }
 
-  .footer__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .footer__nav {
-    justify-content: flex-start;
-  }
 }
 
 @media (max-width: 480px) {

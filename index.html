@@ -20,18 +20,18 @@
 
   <header class="site-header" role="banner">
     <div class="container header__inner">
-      <a class="header__brand" href="#" aria-label="Madosinc home">
+      <a class="brand-lockup" href="#">
         <img
-          class="brand-logo"
+          class="brand-lockup__logo"
           src="images/madosinc-logo.png"
           alt=""
-          width="40"
-          height="40"
+          width="36"
+          height="36"
           decoding="async"
         >
-        <span class="header__brand-text">
-          <span class="header__brand-name">MADOSINC</span>
-          <span class="header__label">Official Notion Certified Company</span>
+        <span class="brand-lockup__text">
+          <span class="brand-lockup__name">Madosinc</span>
+          <span class="brand-lockup__label">Official Notion Certified Company</span>
         </span>
       </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -40,9 +40,9 @@
         <span></span>
       </label>
       <nav class="header__nav" aria-label="Primary">
-        <a href="#work">Work</a>
+        <a href="#offerings">Offerings</a>
         <a href="#services">Services</a>
-        <a href="#solutions">Solutions</a>
+        <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -51,6 +51,16 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero__inner fade-in">
+        <div class="hero__brand">
+          <img
+            src="images/madosinc-logo.png"
+            alt=""
+            width="48"
+            height="48"
+            decoding="async"
+          >
+          <span class="hero__brand-name">Madosinc</span>
+        </div>
         <h1 id="hero-heading">We Design Scalable Systems for Modern Organizations.</h1>
         <p class="hero__subtext">
           Madosinc is an Official Notion Certified Company specializing in workflow architecture, business process optimization, and enterprise-grade system implementation.
@@ -62,13 +72,13 @@
         </ul>
         <div class="hero__actions">
           <a class="btn btn--outline" href="#contact">Book Consultation</a>
-          <a class="btn btn--outline" href="#services">Explore Services</a>
+          <a class="btn btn--outline" href="#offerings">Explore Offerings</a>
         </div>
       </div>
     </section>
 
     <section class="section" id="about" aria-labelledby="about-heading">
-      <div class="container about__grid">
+      <div class="container section--center">
         <div class="about__content fade-in">
           <p class="label">About</p>
           <h2 id="about-heading">Systems Thinking for Operational Excellence</h2>
@@ -79,22 +89,67 @@
             Madosinc designs structured operating systems inside Notion. We architect workflows with clarity, scalability, and automation readiness at the core — enabling leadership teams to govern operations with precision and teams to execute with confidence.
           </p>
         </div>
-        <div class="about__panel fade-in" aria-hidden="true">
-          <div class="about__panel-grid">
-            <span>Clarity</span>
-            <span>Scalability</span>
-            <span>Structure</span>
-            <span>Automation</span>
-          </div>
+        <div class="about__pillars fade-in" aria-hidden="true">
+          <span>Clarity</span>
+          <span>Scalability</span>
+          <span>Structure</span>
+          <span>Automation</span>
         </div>
       </div>
     </section>
 
-    <section class="section section--layer" id="services" aria-labelledby="services-heading">
-      <div class="container">
-        <header class="section__header fade-in">
+    <section class="section section--layer section--highlight" id="offerings" aria-labelledby="offerings-heading">
+      <div class="container section--center">
+        <header class="section__header section__header--center fade-in">
+          <p class="label">What We Offer</p>
+          <h2 id="offerings-heading">Enterprise Notion Solutions</h2>
+          <p class="section__intro">
+            Certified implementation services aligned with Notion best practices — from accelerated workspace launch to complex migrations and ongoing optimization.
+          </p>
+        </header>
+        <ul class="offerings-grid">
+          <li class="offering-card offering-card--featured fade-in">
+            <span class="offering-card__tag">Core Offering</span>
+            <h3>Accelerated Launch</h3>
+            <p>Create Notion workspaces aligned with best-practice design principles while adapting to how your organization operates.</p>
+            <ul class="offering-card__list">
+              <li>Configure policies balancing collaboration and governance</li>
+              <li>Ensure security and scalability from day one</li>
+              <li>Drive adoption with persona-based training and rollout plans</li>
+            </ul>
+          </li>
+          <li class="offering-card offering-card--featured fade-in">
+            <span class="offering-card__tag">Core Offering</span>
+            <h3>Workflow Implementation</h3>
+            <p>Discovery and prioritization of workflows that align to business objectives and deliver measurable impact.</p>
+            <ul class="offering-card__list">
+              <li>Design workflows embedding Notion AI and Agents</li>
+              <li>Bring core business processes into your workspace</li>
+              <li>Enable confident adoption and measurable outcomes over time</li>
+            </ul>
+          </li>
+          <li class="offering-card offering-card--featured fade-in">
+            <span class="offering-card__tag">Core Offering</span>
+            <h3>Technical Advisory &amp; Migrations</h3>
+            <p>Accelerate migrations that preserve data integrity while building integrations that connect your core systems.</p>
+            <ul class="offering-card__list">
+              <li>Maintain relationships and permissions across migrations</li>
+              <li>Build custom integrations and automate handoffs</li>
+              <li>Scale Notion while minimizing risk and maximizing impact</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="container section--center">
+        <header class="section__header section__header--center fade-in">
           <p class="label">Capabilities</p>
-          <h2 id="services-heading">Enterprise Workflow Solutions</h2>
+          <h2 id="services-heading">Full-Service Delivery</h2>
+          <p class="section__intro">
+            End-to-end support across the entire Notion implementation lifecycle — available globally across APAC, Europe, Americas, and beyond.
+          </p>
         </header>
         <ul class="services-grid">
           <li class="service-card fade-in">
@@ -138,11 +193,12 @@
             <p>Enterprise-ready Notion templates tailored to operations.</p>
           </li>
         </ul>
+        <p class="services__budget fade-in">Project budgets from <strong>$250 – $20,000</strong> · Available for work worldwide</p>
       </div>
     </section>
 
     <section class="section" id="work" aria-labelledby="process-heading">
-      <div class="container">
+      <div class="container section--center">
         <header class="section__header section__header--center fade-in">
           <p class="label">Methodology</p>
           <h2 id="process-heading">How We Work</h2>
@@ -173,9 +229,17 @@
     </section>
 
     <section class="section metrics" aria-labelledby="metrics-heading">
-      <div class="container">
+      <div class="container section--center">
         <h2 id="metrics-heading" class="visually-hidden">Impact Metrics</h2>
         <ul class="metrics__grid fade-in">
+          <li class="metric metric--highlight">
+            <span class="metric__value">5.0</span>
+            <span class="metric__label">Client Rating</span>
+          </li>
+          <li class="metric">
+            <span class="metric__value">31+</span>
+            <span class="metric__label">Verified Reviews</span>
+          </li>
           <li class="metric">
             <span class="metric__value">200+</span>
             <span class="metric__label">Workflow Systems Built</span>
@@ -184,20 +248,12 @@
             <span class="metric__value">50+</span>
             <span class="metric__label">Organizations Transformed</span>
           </li>
-          <li class="metric">
-            <span class="metric__value">10,000+</span>
-            <span class="metric__label">Hours Operational Time Saved</span>
-          </li>
-          <li class="metric">
-            <span class="metric__value">95%</span>
-            <span class="metric__label">Process Efficiency Increase</span>
-          </li>
         </ul>
       </div>
     </section>
 
     <section class="section section--layer" id="solutions" aria-labelledby="partnership-heading">
-      <div class="container partnership">
+      <div class="container partnership section--center">
         <div class="partnership__content fade-in">
           <p class="label">Partnership</p>
           <h2 id="partnership-heading">Official Notion Ecosystem Partner</h2>
@@ -222,38 +278,80 @@
       </div>
     </section>
 
-    <section class="section" id="case-studies" aria-labelledby="cases-heading">
-      <div class="container">
-        <header class="section__header fade-in">
-          <p class="label">Case Studies</p>
-          <h2 id="cases-heading">Proven Enterprise Outcomes</h2>
+    <section class="section" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container section--center">
+        <header class="section__header section__header--center fade-in">
+          <p class="label">Client Reviews</p>
+          <h2 id="reviews-heading">Trusted by Organizations Worldwide</h2>
+          <div class="reviews__score fade-in">
+            <span class="reviews__rating">5.0</span>
+            <span class="reviews__meta">Based on 31 verified ratings on Notion Marketplace</span>
+          </div>
         </header>
-        <ul class="cases-grid">
-          <li class="case-card fade-in">
-            <h3>Corporate Workflow Redesign</h3>
-            <p>Unified cross-departmental workflows, reducing operational friction by 40% and establishing governed execution standards across the organization.</p>
+        <ul class="reviews-grid">
+          <li class="review-card fade-in">
+            <p class="review-card__title">Great Experience Working with Madosinc</p>
+            <blockquote>
+              <p>Madosinc made our integration and migration process smooth and stress-free. Their team was professional, responsive, and always willing to help whenever we had questions or new requirements.</p>
+            </blockquote>
+            <footer>
+              <cite>Calvin Samuel</cite>
+              <time datetime="2026-06-03">June 3, 2026</time>
+            </footer>
           </li>
-          <li class="case-card fade-in">
-            <h3>Multi-Team Notion Migration</h3>
-            <p>Structured migration from legacy project tools to a centralized Notion operating system, preserving data integrity across 6 teams and 2,400+ records.</p>
+          <li class="review-card fade-in">
+            <p class="review-card__title">A Trusted Extension of Our Team</p>
+            <blockquote>
+              <p>What stood out most was their commitment after deployment. They remained available, proactive, and focused on helping us get the most out of our system.</p>
+            </blockquote>
+            <footer>
+              <cite>Evan Alexander</cite>
+              <time datetime="2026-06-02">June 2, 2026</time>
+            </footer>
           </li>
-          <li class="case-card fade-in">
-            <h3>Enterprise Knowledge System Build</h3>
-            <p>Architected institutional knowledge infrastructure with taxonomy, linked databases, and retrieval optimization — improving knowledge access by 85%.</p>
+          <li class="review-card fade-in">
+            <p class="review-card__title">Exceptional Service and Results</p>
+            <blockquote>
+              <p>Working with Madosinc was a seamless experience from start to finish. Their team took the time to understand our operational challenges and delivered a solution that significantly improved our workflows and productivity.</p>
+            </blockquote>
+            <footer>
+              <cite>Joel Nathaniel</cite>
+              <time datetime="2026-06-02">June 2, 2026</time>
+            </footer>
           </li>
-          <li class="case-card fade-in">
-            <h3>Startup Scaling Infrastructure</h3>
-            <p>Designed scalable operational foundations enabling rapid team growth from 15 to 80 members without structural rework or process degradation.</p>
+          <li class="review-card fade-in">
+            <p class="review-card__title">Highly Recommended</p>
+            <blockquote>
+              <p>We are extremely satisfied with the results and would gladly work with Madosinc again.</p>
+            </blockquote>
+            <footer>
+              <cite>Zion Elijah</cite>
+              <time datetime="2026-06-02">June 2, 2026</time>
+            </footer>
+          </li>
+          <li class="review-card fade-in">
+            <p class="review-card__title">Work Discovery and Solution Implementation on Notion</p>
+            <blockquote>
+              <p>Madosinc successfully delivered our Notion implementation project with professionalism and expertise. The team streamlined our workflows, built an efficient workspace, and provided valuable automation solutions. Communication was excellent, and the project was completed smoothly and on time.</p>
+            </blockquote>
+            <footer>
+              <cite>Micah Cole</cite>
+              <time datetime="2026-05-31">May 31, 2026</time>
+            </footer>
           </li>
         </ul>
+        <p class="reviews__source fade-in">
+          <a href="https://www.notion.com/@madosinc" target="_blank" rel="noopener noreferrer">View all reviews on Notion Marketplace →</a>
+        </p>
       </div>
     </section>
 
     <section class="section section--layer contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="container">
+      <div class="container section--center">
         <header class="contact__header fade-in">
           <p class="label">Contact</p>
           <h2 id="contact-heading">Let's Build Your System Architecture</h2>
+          <p class="section__intro">Tell us about your operational challenges. We'll respond with a structured approach tailored to your organization.</p>
         </header>
         <form
           class="contact__form fade-in"
@@ -269,7 +367,7 @@
             <label class="label" for="company">Company Name</label>
             <input type="text" id="company" name="Company Name" required autocomplete="organization" placeholder="Organization">
           </div>
-          <div class="form-field">
+          <div class="form-field form-field--full">
             <label class="label" for="email">Email</label>
             <input type="email" id="email" name="Email" required autocomplete="email" placeholder="you@company.com">
           </div>
@@ -283,29 +381,72 @@
         </form>
       </div>
     </section>
+
+    <section class="section team-flyer" id="team" aria-labelledby="team-heading">
+      <div class="container section--center">
+        <header class="section__header section__header--center fade-in">
+          <p class="label">Leadership</p>
+          <h2 id="team-heading">Meet the Founders</h2>
+          <p class="section__intro">Notion Certified Consultants driving enterprise workflow transformation at scale.</p>
+        </header>
+        <div class="team-flyer__grid">
+          <article class="founder-card fade-in">
+            <div class="founder-card__photo">
+              <img
+                src="images/hammad-hassan.png"
+                alt="Hammad Hassan"
+                width="400"
+                height="500"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="founder-card__info">
+              <h3>Hammad Hassan</h3>
+              <p class="founder-card__role">Notion Certified Consultant | Co-founder, Madosinc</p>
+            </div>
+          </article>
+          <article class="founder-card fade-in">
+            <div class="founder-card__photo">
+              <img
+                src="images/ahmad-hassan.png"
+                alt="Ahmad Hassan"
+                width="400"
+                height="500"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="founder-card__info">
+              <h3>Ahmad Hassan</h3>
+              <p class="founder-card__role">Notion Certified Consultant | Co-founder, Madosinc</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container footer__inner">
-      <div class="footer__brand">
+      <a class="brand-lockup brand-lockup--footer" href="#">
         <img
-          class="brand-logo"
+          class="brand-lockup__logo"
           src="images/madosinc-logo.png"
           alt=""
-          width="36"
-          height="36"
-          loading="lazy"
+          width="32"
+          height="32"
           decoding="async"
         >
-        <div class="footer__brand-text">
-          <p class="footer__name">MADOSINC</p>
-          <p class="footer__tagline">Official Notion Certified Company</p>
-        </div>
-      </div>
+        <span class="brand-lockup__text">
+          <span class="brand-lockup__name">Madosinc</span>
+          <span class="brand-lockup__label">Official Notion Certified Company</span>
+        </span>
+      </a>
       <nav class="footer__nav" aria-label="Footer">
+        <a href="#offerings">Offerings</a>
         <a href="#services">Services</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#case-studies">Case Studies</a>
+        <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
       </nav>
       <p class="footer__copy">&copy; 2026 Madosinc. All rights reserved.</p>
