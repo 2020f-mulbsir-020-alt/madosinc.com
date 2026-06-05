@@ -13,17 +13,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="images/madosinc-logo.svg" type="image/svg+xml">
+  <link rel="icon" href="images/madosinc-logo.png" type="image/png">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" role="banner">
     <div class="container header__inner">
-      <div class="header__brand-group">
-        <a class="header__brand" href="#">MADOSINC</a>
-        <span class="header__label">Official Notion Certified Company</span>
-      </div>
+      <a class="header__brand" href="#" aria-label="Madosinc home">
+        <img
+          class="brand-logo"
+          src="images/madosinc-logo.png"
+          alt=""
+          width="40"
+          height="40"
+          decoding="async"
+        >
+        <span class="header__brand-text">
+          <span class="header__brand-name">MADOSINC</span>
+          <span class="header__label">Official Notion Certified Company</span>
+        </span>
+      </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
         <span></span>
@@ -278,8 +288,19 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <p class="footer__name">MADOSINC</p>
-        <p class="footer__tagline">Official Notion Certified Company</p>
+        <img
+          class="brand-logo"
+          src="images/madosinc-logo.png"
+          alt=""
+          width="36"
+          height="36"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="footer__brand-text">
+          <p class="footer__name">MADOSINC</p>
+          <p class="footer__tagline">Official Notion Certified Company</p>
+        </div>
       </div>
       <nav class="footer__nav" aria-label="Footer">
         <a href="#services">Services</a>

@@ -182,22 +182,34 @@ textarea {
   gap: 2rem;
 }
 
-.header__brand-group {
+.brand-logo {
+  flex-shrink: 0;
+  display: block;
+  border-radius: 4px;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  transition: opacity var(--transition-fast);
+}
+
+.header__brand:hover {
+  opacity: 0.85;
+}
+
+.header__brand-text {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.header__brand {
+.header__brand-name {
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.22em;
   color: var(--color-text);
-  transition: color var(--transition-fast);
-}
-
-.header__brand:hover {
-  color: var(--color-accent);
 }
 
 .header__label {
@@ -698,6 +710,12 @@ textarea {
   grid-template-rows: auto auto;
   gap: 2rem 3rem;
   align-items: start;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
 }
 
 .footer__name {
