@@ -172,8 +172,10 @@ a {
 
 .header__logo {
   display: block;
-  height: 1.75rem;
   width: auto;
+  height: 2rem;
+  max-width: 9rem;
+  object-fit: contain;
 }
 
 .header__nav {
@@ -371,13 +373,6 @@ a {
 
 .hero__inner {
   margin-inline: auto;
-}
-
-.hero__logo {
-  display: block;
-  height: auto;
-  width: min(260px, 70vw);
-  margin: 0 auto 1.5rem;
 }
 
 .hero__eyebrow {
@@ -964,9 +959,17 @@ a {
 
 .footer__logo {
   display: block;
-  height: auto;
-  width: min(220px, 60vw);
+  width: auto;
+  height: 1.75rem;
+  max-width: 7.5rem;
   margin-inline: auto;
+  object-fit: contain;
+}
+
+.footer__tagline {
+  margin: 0.25rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--stone);
 }
 
 .footer__nav {
