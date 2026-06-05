@@ -7,7 +7,7 @@
   <title>Madosinc | Notion Certified Consulting Partner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/madosinc-logo.svg" type="image/svg+xml">
 </head>
@@ -35,15 +35,36 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="container hero__inner reveal">
-        <h1 id="hero-heading">Build Structured Systems That Scale Your Business.</h1>
-        <p class="hero__subtext">
-          Madosinc is a Notion Certified Consulting Partner helping organizations design, implement, and scale powerful workflow systems, automation layers, and digital workspaces.
-        </p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#contact">Book Consultation</a>
-          <a class="btn btn--secondary" href="#services">Explore Services</a>
+      <div class="hero__canvas" aria-hidden="true">
+        <div class="hero__wash hero__wash--1"></div>
+        <div class="hero__wash hero__wash--2"></div>
+        <div class="hero__grid"></div>
+      </div>
+      <div class="container hero__layout reveal">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Notion Certified Consulting Partner</p>
+          <h1 id="hero-heading">Build Structured Systems That <em>Scale</em> Your Business.</h1>
+          <p class="hero__subtext">
+            Madosinc helps organizations design, implement, and scale powerful workflow systems, automation layers, and digital workspaces — with clarity built for enterprise adoption.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">Book Consultation</a>
+            <a class="btn btn--secondary" href="#services">Explore Services</a>
+          </div>
         </div>
+        <aside class="hero__panel" aria-label="Practice highlights">
+          <div class="hero__panel-inner">
+            <p class="hero__panel-label">Practice Focus</p>
+            <ul class="hero__panel-list">
+              <li>Workflow Architecture</li>
+              <li>AI &amp; Automation</li>
+              <li>Enterprise Migration</li>
+              <li>Change Management</li>
+            </ul>
+            <div class="hero__panel-rule"></div>
+            <p class="hero__panel-stat"><span>120+</span> projects delivered globally</p>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -55,42 +76,52 @@
         </header>
         <ul class="expertise-grid">
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">01</span>
             <h3>Workflow Discovery</h3>
             <p>Audit current workflows, map operational gaps, and define system requirements before implementation.</p>
           </li>
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">02</span>
             <h3>Workflow Implementation</h3>
             <p>Deploy structured Notion workflows aligned to how your teams actually operate.</p>
           </li>
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">03</span>
             <h3>Solution Implementation</h3>
             <p>Build and configure complete Notion solutions for defined business objectives.</p>
           </li>
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">04</span>
             <h3>Integration</h3>
             <p>Connect Notion with your existing tools, databases, and operational stack.</p>
           </li>
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">05</span>
             <h3>Migration</h3>
             <p>Transfer data, documentation, and processes into Notion with minimal disruption.</p>
           </li>
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">06</span>
             <h3>Change Management</h3>
             <p>Guide teams through adoption with structured rollout plans and clear communication.</p>
           </li>
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">07</span>
             <h3>Custom Training</h3>
             <p>Deliver tailored training programs that build sustained system competency across teams.</p>
           </li>
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">08</span>
             <h3>Ongoing Support</h3>
             <p>Provide continued system maintenance, refinement, and operational support.</p>
           </li>
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">09</span>
             <h3>Project Management</h3>
             <p>Lead end-to-end Notion projects with disciplined delivery and milestone tracking.</p>
           </li>
           <li class="expertise-card reveal">
+            <span class="expertise-card__index">10</span>
             <h3>Custom Templates</h3>
             <p>Design reusable templates that standardize work and accelerate execution organization-wide.</p>
           </li>
@@ -359,6 +390,14 @@
       </div>
     </section>
 
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <div class="container cta-band__inner reveal">
+        <h2 id="cta-heading">Ready to architect your next operating system?</h2>
+        <p>Partner with a certified Notion consultant to transform how your organization works.</p>
+        <a class="btn btn--light" href="#contact">Schedule a Strategy Call</a>
+      </div>
+    </section>
+
     <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
       <div class="container">
         <header class="contact__header reveal">
@@ -366,6 +405,7 @@
           <h2 id="contact-heading">Book a Strategy Call</h2>
           <p class="contact__lead">Tell us about your organization. We respond within one business day.</p>
         </header>
+        <div class="contact__card reveal">
         <form
           class="contact__form reveal"
           action="mailto:contact@madosinc.com?subject=Strategy%20Call%20Request"
@@ -392,6 +432,7 @@
             <button type="submit" class="btn btn--primary btn--full">Book a Strategy Call</button>
           </div>
         </form>
+        </div>
       </div>
     </section>
   </main>
