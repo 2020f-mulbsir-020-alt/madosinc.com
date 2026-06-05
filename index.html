@@ -46,19 +46,13 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero__logo-float fade-in" aria-hidden="true">
-        <img
-          class="hero__logo"
-          src="images/madosinc-hero-logo.png"
-          alt=""
-          width="480"
-          height="480"
-          decoding="async"
-        >
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__bg-glow"></div>
+        <div class="hero__bg-grid"></div>
       </div>
       <div class="container hero__grid">
         <div class="hero__content fade-in">
-          <p class="label">Notion Certified Consultancy</p>
+          <p class="label hero__label">Notion Certified Consultancy</p>
           <h1 id="hero-heading">
             Build Systems.<br>
             Streamline Operations.<br>
@@ -68,8 +62,8 @@
             We help organizations transform disconnected workflows into intelligent operating systems using Notion, automation, AI, integrations, and scalable process design.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#contact">Book Discovery Call</a>
-            <a class="btn btn--secondary" href="#services">View Services</a>
+            <a class="btn btn--primary btn--hero" href="#contact">Book Discovery Call</a>
+            <a class="btn btn--secondary btn--hero-outline" href="#services">View Services</a>
           </div>
           <ul class="hero__trust" aria-label="Trust indicators">
             <li><strong>120+</strong> Successful Projects</li>
@@ -77,63 +71,18 @@
             <li><strong>Certified</strong> Expertise</li>
           </ul>
         </div>
-        <div class="hero__viz fade-in" aria-hidden="true">
-          <div class="ecosystem">
-            <div class="ecosystem__grid"></div>
-            <div class="ecosystem__core">
-              <img
-                class="ecosystem__logo"
-                src="images/madosinc-hero-logo.png"
-                alt="Madosinc"
-                width="120"
-                height="120"
-                decoding="async"
-              >
-            </div>
-            <div class="ecosystem__node ecosystem__node--people" data-label="People">
-              <span class="ecosystem__icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </span>
-              <span class="ecosystem__name">People</span>
-            </div>
-            <div class="ecosystem__node ecosystem__node--processes" data-label="Processes">
-              <span class="ecosystem__icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-              </span>
-              <span class="ecosystem__name">Processes</span>
-            </div>
-            <div class="ecosystem__node ecosystem__node--knowledge" data-label="Knowledge">
-              <span class="ecosystem__icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              </span>
-              <span class="ecosystem__name">Knowledge</span>
-            </div>
-            <div class="ecosystem__node ecosystem__node--automation" data-label="Automation">
-              <span class="ecosystem__icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-              </span>
-              <span class="ecosystem__name">Automation</span>
-            </div>
-            <div class="ecosystem__node ecosystem__node--ai" data-label="AI">
-              <span class="ecosystem__icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 1 4 4v1h3a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v1a4 4 0 0 1-8 0v-1H9a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3V6a4 4 0 0 1 4-4z"/></svg>
-              </span>
-              <span class="ecosystem__name">AI</span>
-            </div>
-            <div class="ecosystem__node ecosystem__node--integrations" data-label="Integrations">
-              <span class="ecosystem__icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-              </span>
-              <span class="ecosystem__name">Integrations</span>
-            </div>
-            <svg class="ecosystem__lines" viewBox="0 0 400 400" preserveAspectRatio="none">
-              <line x1="200" y1="200" x2="200" y2="60" class="ecosystem__line"/>
-              <line x1="200" y1="200" x2="340" y2="120" class="ecosystem__line"/>
-              <line x1="200" y1="200" x2="340" y2="280" class="ecosystem__line"/>
-              <line x1="200" y1="200" x2="200" y2="340" class="ecosystem__line"/>
-              <line x1="200" y1="200" x2="60" y2="280" class="ecosystem__line"/>
-              <line x1="200" y1="200" x2="60" y2="120" class="ecosystem__line"/>
-            </svg>
+        <div class="hero__viz fade-in">
+          <div class="hero__logo-wrap">
+            <div class="hero__logo-ring" aria-hidden="true"></div>
+            <div class="hero__logo-glow" aria-hidden="true"></div>
+            <img
+              class="hero__logo-main"
+              src="images/madosinc-hero-logo.png"
+              alt="Madosinc"
+              width="480"
+              height="480"
+              decoding="async"
+            >
           </div>
         </div>
       </div>
