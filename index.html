@@ -16,7 +16,9 @@
 
   <header class="site-header" role="banner">
     <div class="container header__inner">
-      <a class="header__brand" href="#">MADOSINC</a>
+      <a class="header__brand" href="#">
+        <img src="images/madosinc-logo.png" alt="Madosinc" width="168" height="40" class="brand-logo brand-logo--nav" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
+      </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
         <span></span>
@@ -39,6 +41,10 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero__inner fade-in">
+        <div class="hero__brand">
+          <img src="images/madosinc-logo.png" alt="Madosinc" width="220" height="52" class="brand-logo brand-logo--hero" onerror="this.onerror=null;this.src='images/madosinc-logo.svg';">
+        </div>
+        <p class="hero__eyebrow label">Official Notion Solution Consultant</p>
         <h1 id="hero-heading">Notion Systems. Built for Scale.</h1>
         <p class="hero__subtext">
           Madosinc is a global Notion consulting company specializing in custom workspaces, AI integrations, automation systems, and enterprise database architecture.
@@ -111,6 +117,58 @@
       </div>
     </section>
 
+    <section class="section" id="integrations" aria-labelledby="integrations-heading">
+      <div class="container">
+        <header class="section__header section__header--center fade-in">
+          <p class="label">Integrations</p>
+          <h2 id="integrations-heading">Connected Systems Architecture</h2>
+          <p class="section__lead">Notion as your central operating system — unified with the enterprise platforms and modern tools your teams already use.</p>
+        </header>
+        <div class="integrations__grid">
+          <figure class="integrations__card fade-in">
+            <img
+              src="images/integrations-enterprise.png"
+              alt="Notion connected to Google Drive, Salesforce, Slack, Gmail, Dropbox, QuickBooks, Outlook, and more"
+              width="800"
+              height="500"
+              loading="lazy"
+            >
+            <figcaption class="label">Enterprise platforms &amp; business tools</figcaption>
+          </figure>
+          <figure class="integrations__card fade-in">
+            <img
+              src="images/integrations-ecosystem.png"
+              alt="Notion hub with GitHub, Slack, Figma, Gmail, Linear, HubSpot, Intercom, and other app integrations"
+              width="800"
+              height="500"
+              loading="lazy"
+            >
+            <figcaption class="label">Modern product &amp; workflow ecosystem</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="certifications-heading">
+      <div class="container">
+        <header class="section__header section__header--center fade-in">
+          <p class="label">Certification</p>
+          <h2 id="certifications-heading">Officially Certified by Notion</h2>
+          <p class="section__lead">Academy Essentials through Advanced, Workflows, AI, Certified Admin, Service Specialist, and Consulting Partner.</p>
+        </header>
+        <figure class="media-frame fade-in">
+          <img
+            src="images/notion-certifications.png"
+            alt="Official Notion certification badges: Academy Essentials, Advanced, Workflows, AI, Certified Admin, Service Specialist, and Consulting Partner"
+            width="1200"
+            height="280"
+            loading="lazy"
+            class="media-img"
+          >
+        </figure>
+      </div>
+    </section>
+
     <section class="section section--light" aria-labelledby="why-heading">
       <div class="container why__inner fade-in">
         <h2 id="why-heading">Systems that scale with your thinking.</h2>
@@ -179,42 +237,152 @@
       </div>
     </section>
 
-    <section class="section" id="contact" aria-labelledby="contact-heading">
-      <div class="container contact__grid">
-        <div class="contact__info fade-in">
-          <p class="label">Contact</p>
-          <h2 id="contact-heading">Start a Conversation</h2>
-          <p class="contact__lead">
-            Tell us about your project. We respond to all inquiries within one business day.
-          </p>
-          <p class="contact__email">
-            <a href="mailto:contact@madosinc.com">contact@madosinc.com</a>
-          </p>
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="contact-section__header fade-in">
+          <p class="label">Get in Touch</p>
+          <h2 id="contact-heading">Book Your Notion Consultation</h2>
+          <p class="contact-section__lead">Share your project requirements and our certified consultants will respond within one business day.</p>
+        </header>
+
+        <div class="contact__highlight fade-in">
+          <div class="contact__grid">
+            <div class="contact__info">
+              <div class="contact__email-box">
+                <p class="label">Direct Email</p>
+                <a class="contact__email-link" href="mailto:contact@madosinc.com">contact@madosinc.com</a>
+                <p class="contact__email-note">All form submissions are delivered to this address.</p>
+              </div>
+
+              <ul class="contact__facts">
+                <li>
+                  <strong>Response Time</strong>
+                  <span>Within 1 business day</span>
+                </li>
+                <li>
+                  <strong>Availability</strong>
+                  <span>Immediate project start</span>
+                </li>
+                <li>
+                  <strong>Credentials</strong>
+                  <span>Official Notion Consulting Partner</span>
+                </li>
+                <li>
+                  <strong>Global Reach</strong>
+                  <span>40+ clients across 15+ industries</span>
+                </li>
+              </ul>
+
+              <div class="contact__links">
+                <p class="label">Official Profiles</p>
+                <ul>
+                  <li><a href="https://www.notion.com/@madosinc" target="_blank" rel="noopener noreferrer">notion.com/@madosinc</a></li>
+                  <li><a href="https://www.notion.com/" target="_blank" rel="noopener noreferrer">notion.com</a></li>
+                </ul>
+              </div>
+
+              <figure class="contact__clients">
+                <img
+                  src="images/clients.png"
+                  alt="Madosinc clients include Bangladesh Government, Dimond Billing Solution, Aquamarine Projects, Metrix Advisory, Host, and 120 plus projects"
+                  width="600"
+                  height="160"
+                  loading="lazy"
+                >
+              </figure>
+            </div>
+
+            <form
+              class="contact__form"
+              action="mailto:contact@madosinc.com?subject=Madosinc%20Project%20Inquiry"
+              method="POST"
+              enctype="text/plain"
+            >
+              <p class="contact__form-title">Project Inquiry Form</p>
+              <p class="contact__form-desc">Complete the form below. Your message will open in your email client addressed to <strong>contact@madosinc.com</strong>.</p>
+
+              <div class="form-row form-row--half">
+                <div class="form-field">
+                  <label class="label" for="name">Full Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="Full Name" required autocomplete="name" placeholder="Jane Smith">
+                </div>
+                <div class="form-field">
+                  <label class="label" for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="Email" required autocomplete="email" placeholder="jane@company.com">
+                </div>
+              </div>
+
+              <div class="form-row form-row--half">
+                <div class="form-field">
+                  <label class="label" for="company">Company / Organization</label>
+                  <input type="text" id="company" name="Company" autocomplete="organization" placeholder="Your organization">
+                </div>
+                <div class="form-field">
+                  <label class="label" for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="Phone" autocomplete="tel" placeholder="+1 (000) 000-0000">
+                </div>
+              </div>
+
+              <div class="form-row form-row--half">
+                <div class="form-field">
+                  <label class="label" for="role">Your Role</label>
+                  <input type="text" id="role" name="Role" autocomplete="organization-title" placeholder="Operations Director">
+                </div>
+                <div class="form-field">
+                  <label class="label" for="project-type">Project Type</label>
+                  <select id="project-type" name="Project Type">
+                    <option value="">Select a service</option>
+                    <option value="Workspace Design">Notion Workspace Design</option>
+                    <option value="Database Architecture">Database Architecture</option>
+                    <option value="AI Workflow Systems">AI Workflow Systems</option>
+                    <option value="Automation Engineering">Automation Engineering</option>
+                    <option value="Custom Templates">Custom Template Development</option>
+                    <option value="API and Integrations">API &amp; Integration Solutions</option>
+                    <option value="Migration">Migration &amp; Change Management</option>
+                    <option value="Ongoing Support">Ongoing Support</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row form-row--half">
+                <div class="form-field">
+                  <label class="label" for="timeline">Project Timeline</label>
+                  <select id="timeline" name="Timeline">
+                    <option value="">Select timeline</option>
+                    <option value="Immediate">Immediate — ready to start</option>
+                    <option value="1-2 weeks">Within 1–2 weeks</option>
+                    <option value="1 month">Within 1 month</option>
+                    <option value="Planning">Planning phase — exploring options</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="label" for="team-size">Team Size</label>
+                  <select id="team-size" name="Team Size">
+                    <option value="">Select team size</option>
+                    <option value="1-10">1–10 people</option>
+                    <option value="11-50">11–50 people</option>
+                    <option value="51-200">51–200 people</option>
+                    <option value="200+">200+ people</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="label" for="details">Project Details <span class="required">*</span></label>
+                <textarea id="details" name="Project Details" rows="6" required placeholder="Describe your current workflows, goals, tools in use, and what you want to achieve with Notion..."></textarea>
+              </div>
+
+              <div class="form-row">
+                <label class="label" for="referral">How did you hear about Madosinc?</label>
+                <input type="text" id="referral" name="Referral Source" placeholder="Notion marketplace, referral, search, etc.">
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full btn--submit">Send Request to contact@madosinc.com</button>
+              <p class="contact__form-footer">By submitting, you agree to be contacted by Madosinc regarding your inquiry. We respect your privacy and never share your information.</p>
+            </form>
+          </div>
         </div>
-        <form
-          class="contact__form fade-in"
-          action="mailto:contact@madosinc.com"
-          method="POST"
-          enctype="text/plain"
-        >
-          <div class="form-row">
-            <label class="label" for="name">Name</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
-          </div>
-          <div class="form-row">
-            <label class="label" for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-          </div>
-          <div class="form-row">
-            <label class="label" for="company">Company</label>
-            <input type="text" id="company" name="company" autocomplete="organization">
-          </div>
-          <div class="form-row">
-            <label class="label" for="details">Project Details</label>
-            <textarea id="details" name="details" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Send Request</button>
-        </form>
       </div>
     </section>
 
@@ -418,11 +586,27 @@
   </main>
 
   <footer class="site-footer" role="contentinfo">
+    <div class="container footer__logo-wrap">
+      <a class="footer__logo" href="#">
+        <img
+          src="images/madosinc-logo-full.png"
+          alt="Madosinc — Official Notion Solution Consultant"
+          width="320"
+          height="80"
+          class="brand-logo brand-logo--full"
+          onerror="this.onerror=null;this.src='images/madosinc-logo-full.svg';"
+        >
+      </a>
+    </div>
     <div class="container footer__inner">
-      <p class="footer__brand">MADOSINC</p>
       <p class="footer__tagline">Notion Consulting Company</p>
       <p class="footer__contact">
         Contact: <a href="mailto:contact@madosinc.com">contact@madosinc.com</a>
+      </p>
+      <p class="footer__links">
+        <a href="https://www.notion.com/@madosinc" target="_blank" rel="noopener noreferrer">notion.com/@madosinc</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.notion.com/" target="_blank" rel="noopener noreferrer">notion.com</a>
       </p>
       <p class="footer__copy">&copy; 2026 Madosinc. All rights reserved.</p>
     </div>
