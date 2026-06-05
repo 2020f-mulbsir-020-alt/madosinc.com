@@ -7,7 +7,7 @@
   <title>Madosinc | Notion Certified Consulting Partner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/madosinc-logo.svg" type="image/svg+xml">
 </head>
@@ -28,49 +28,28 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <span class="header__badge">Notion Certified Consultant</span>
+      <span class="header__badge" aria-label="Notion Certified Consultant">Certified</span>
     </div>
-    <div class="header__divider" aria-hidden="true"></div>
   </header>
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero__canvas" aria-hidden="true">
-        <div class="hero__wash hero__wash--1"></div>
-        <div class="hero__wash hero__wash--2"></div>
-        <div class="hero__grid"></div>
-      </div>
-      <div class="container hero__layout reveal">
-        <div class="hero__content">
-          <p class="hero__eyebrow">Notion Certified Consulting Partner</p>
-          <h1 id="hero-heading">Build Structured Systems That <em>Scale</em> Your Business.</h1>
-          <p class="hero__subtext">
-            Madosinc helps organizations design, implement, and scale powerful workflow systems, automation layers, and digital workspaces — with clarity built for enterprise adoption.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#contact">Book Consultation</a>
-            <a class="btn btn--secondary" href="#services">Explore Services</a>
-          </div>
+      <div class="container container--narrow hero__inner reveal">
+        <p class="hero__eyebrow">Notion Certified Consulting Partner</p>
+        <h1 id="hero-heading">Build Structured Systems That Scale Your Business.</h1>
+        <p class="hero__subtext">
+          Madosinc helps organizations design, implement, and scale workflow systems, automation layers, and digital workspaces — with clarity built for long-term adoption.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">Book Consultation</a>
+          <a class="btn btn--secondary" href="#services">Explore Services</a>
         </div>
-        <aside class="hero__panel" aria-label="Practice highlights">
-          <div class="hero__panel-inner">
-            <p class="hero__panel-label">Practice Focus</p>
-            <ul class="hero__panel-list">
-              <li>Workflow Architecture</li>
-              <li>AI &amp; Automation</li>
-              <li>Enterprise Migration</li>
-              <li>Change Management</li>
-            </ul>
-            <div class="hero__panel-rule"></div>
-            <p class="hero__panel-stat"><span>120+</span> projects delivered globally</p>
-          </div>
-        </aside>
       </div>
     </section>
 
     <section class="section" id="services" aria-labelledby="services-heading">
-      <div class="container">
-        <header class="section__header reveal">
+      <div class="container container--content">
+        <header class="section__header section__header--center reveal">
           <p class="label">Core Expertise</p>
           <h2 id="services-heading">Structured services for every stage of systems transformation.</h2>
         </header>
@@ -130,8 +109,8 @@
     </section>
 
     <section class="section section--beige" id="pillars" aria-labelledby="pillars-heading">
-      <div class="container">
-        <header class="section__header reveal">
+      <div class="container container--content">
+        <header class="section__header section__header--center reveal">
           <p class="label">What We Do</p>
           <h2 id="pillars-heading">Three pillars of structured transformation.</h2>
         </header>
@@ -156,7 +135,7 @@
     </section>
 
     <section class="section metrics" aria-labelledby="metrics-heading">
-      <div class="container">
+      <div class="container container--content">
         <header class="section__header section__header--center reveal">
           <p class="label">Impact</p>
           <h2 id="metrics-heading" class="visually-hidden">Impact Metrics</h2>
@@ -183,8 +162,8 @@
     </section>
 
     <section class="section section--beige" id="process" aria-labelledby="process-heading">
-      <div class="container">
-        <header class="section__header reveal">
+      <div class="container container--content">
+        <header class="section__header section__header--center reveal">
           <p class="label">Process</p>
           <h2 id="process-heading">A structured path from discovery to optimization.</h2>
         </header>
@@ -236,8 +215,8 @@
     </section>
 
     <section class="section" id="about" aria-labelledby="why-heading">
-      <div class="container">
-        <header class="section__header reveal">
+      <div class="container container--content">
+        <header class="section__header section__header--center reveal">
           <p class="label">Why Madosinc</p>
           <h2 id="why-heading">Enterprise-grade consulting built on certified expertise.</h2>
         </header>
@@ -267,8 +246,8 @@
     </section>
 
     <section class="section section--beige" id="approach" aria-labelledby="approach-heading">
-      <div class="container">
-        <header class="section__header reveal">
+      <div class="container container--narrow">
+        <header class="section__header section__header--center reveal">
           <p class="label">Work Approach</p>
           <h2 id="approach-heading">Methodology grounded in operational reality.</h2>
         </header>
@@ -298,8 +277,8 @@
     </section>
 
     <section class="section" id="work" aria-labelledby="work-heading">
-      <div class="container">
-        <header class="section__header reveal">
+      <div class="container container--content">
+        <header class="section__header section__header--center reveal">
           <p class="label">Trust</p>
           <h2 id="work-heading">Proven outcomes across industries and scales.</h2>
         </header>
@@ -399,46 +378,165 @@
     </section>
 
     <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="container">
+      <div class="container container--narrow">
         <header class="contact__header reveal">
           <p class="label">Contact</p>
           <h2 id="contact-heading">Book a Strategy Call</h2>
-          <p class="contact__lead">Tell us about your organization. We respond within one business day.</p>
+          <p class="contact__lead">Share your project details below. We respond within one business day.</p>
+          <p class="contact__email">
+            Or email us directly at
+            <a href="mailto:contact@madosinc.com">contact@madosinc.com</a>
+          </p>
         </header>
         <div class="contact__card reveal">
-        <form
-          class="contact__form reveal"
-          action="mailto:contact@madosinc.com?subject=Strategy%20Call%20Request"
-          method="POST"
-          enctype="text/plain"
-        >
-          <div class="form-field">
-            <label class="label" for="name">Name</label>
-            <input type="text" id="name" name="Name" required autocomplete="name" placeholder="Your name">
-          </div>
-          <div class="form-field">
-            <label class="label" for="email">Email</label>
-            <input type="email" id="email" name="Email" required autocomplete="email" placeholder="you@company.com">
-          </div>
-          <div class="form-field">
-            <label class="label" for="company">Company</label>
-            <input type="text" id="company" name="Company" required autocomplete="organization" placeholder="Organization">
-          </div>
-          <div class="form-field form-field--full">
-            <label class="label" for="message">Message</label>
-            <textarea id="message" name="Message" rows="5" required placeholder="Describe your current systems and objectives..."></textarea>
-          </div>
-          <div class="form-field form-field--full">
-            <button type="submit" class="btn btn--primary btn--full">Book a Strategy Call</button>
-          </div>
-        </form>
+          <form
+            class="contact__form"
+            action="https://formsubmit.co/contact@madosinc.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New Inquiry — Madosinc.com">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://madosinc.com/thanks.html">
+            <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <fieldset class="form-section">
+              <legend class="form-section__title">Your Details</legend>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="First Name" required autocomplete="given-name" placeholder="Jane">
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="Last Name" required autocomplete="family-name" placeholder="Smith">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="email">Work Email</label>
+                  <input type="email" id="email" name="Email" required autocomplete="email" placeholder="jane@company.com">
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="phone">Phone <span class="form-optional">(optional)</span></label>
+                  <input type="tel" id="phone" name="Phone" autocomplete="tel" placeholder="+1 (555) 000-0000">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="company">Company</label>
+                  <input type="text" id="company" name="Company" required autocomplete="organization" placeholder="Organization name">
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="role">Job Title</label>
+                  <input type="text" id="role" name="Job Title" required autocomplete="organization-title" placeholder="Director of Operations">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend class="form-section__title">Project Information</legend>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="company-size">Company Size</label>
+                  <select id="company-size" name="Company Size" required>
+                    <option value="" disabled selected>Select size</option>
+                    <option value="1–10 employees">1–10 employees</option>
+                    <option value="11–50 employees">11–50 employees</option>
+                    <option value="51–200 employees">51–200 employees</option>
+                    <option value="201–500 employees">201–500 employees</option>
+                    <option value="500+ employees">500+ employees</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="team-size">Team Size Affected</label>
+                  <select id="team-size" name="Team Size" required>
+                    <option value="" disabled selected>Select team size</option>
+                    <option value="1–5 people">1–5 people</option>
+                    <option value="6–20 people">6–20 people</option>
+                    <option value="21–50 people">21–50 people</option>
+                    <option value="51–100 people">51–100 people</option>
+                    <option value="100+ people">100+ people</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="service">Service Interest</label>
+                  <select id="service" name="Service Interest" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Workflow Discovery">Workflow Discovery</option>
+                    <option value="Workflow Implementation">Workflow Implementation</option>
+                    <option value="Solution Implementation">Solution Implementation</option>
+                    <option value="Integration">Integration</option>
+                    <option value="Migration">Migration</option>
+                    <option value="Change Management">Change Management</option>
+                    <option value="Custom Training">Custom Training</option>
+                    <option value="Ongoing Support">Ongoing Support</option>
+                    <option value="Project Management">Project Management</option>
+                    <option value="Custom Templates">Custom Templates</option>
+                    <option value="Multiple Services">Multiple Services</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="timeline">Project Timeline</label>
+                  <select id="timeline" name="Timeline" required>
+                    <option value="" disabled selected>Select timeline</option>
+                    <option value="Immediate (within 2 weeks)">Immediate (within 2 weeks)</option>
+                    <option value="1–3 months">1–3 months</option>
+                    <option value="3–6 months">3–6 months</option>
+                    <option value="6+ months">6+ months</option>
+                    <option value="Exploring options">Exploring options</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-field form-field--full">
+                <label class="form-label" for="tools">Current Tools &amp; Systems</label>
+                <input type="text" id="tools" name="Current Tools" placeholder="e.g. Notion, Slack, Asana, Salesforce, Google Workspace">
+              </div>
+              <div class="form-field form-field--full">
+                <label class="form-label" for="message">Project Description</label>
+                <textarea id="message" name="Project Description" rows="6" required placeholder="Describe your current workflows, challenges, and what you want to achieve..."></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section form-section--last">
+              <legend class="form-section__title">Preferences</legend>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="contact-method">Preferred Contact Method</label>
+                  <select id="contact-method" name="Preferred Contact" required>
+                    <option value="" disabled selected>Select method</option>
+                    <option value="Email">Email</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Video Call">Video Call</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="referral">How did you hear about us? <span class="form-optional">(optional)</span></label>
+                  <select id="referral" name="Referral Source">
+                    <option value="" selected>Select source</option>
+                    <option value="Notion Marketplace">Notion Marketplace</option>
+                    <option value="Referral">Referral</option>
+                    <option value="Search Engine">Search Engine</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-field form-field--full">
+                <button type="submit" class="btn btn--primary btn--full">Submit Strategy Call Request</button>
+                <p class="form-note">Submissions are sent securely to <strong>contact@madosinc.com</strong>.</p>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer__inner">
+    <div class="container container--narrow footer__inner">
       <div class="footer__brand">
         <p class="footer__name">MADOSINC</p>
         <p class="footer__tagline">Notion Certified Consulting Partner</p>
