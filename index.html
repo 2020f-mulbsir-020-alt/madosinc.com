@@ -12,9 +12,9 @@
   <title>Madosinc | Official Notion Certified Consultancy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="images/madosinc-logo.svg" type="image/svg+xml">
+  <link rel="icon" href="images/madosinc-mark.svg" type="image/svg+xml">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -22,7 +22,12 @@
   <header class="site-header" role="banner">
     <div class="container header__inner">
       <div class="header__brand-group">
-        <a class="header__brand" href="#">MADOSINC</a>
+        <a class="header__brand" href="#" aria-label="Madosinc home">
+          <picture>
+            <source srcset="images/madosinc-logo.png" type="image/png">
+            <img src="images/madosinc-wordmark.svg" alt="Madosinc" class="header__logo" width="160" height="40">
+          </picture>
+        </a>
         <span class="header__badge">Official Notion Certified Consultancy</span>
       </div>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
@@ -71,7 +76,10 @@
           <div class="ecosystem">
             <div class="ecosystem__grid"></div>
             <div class="ecosystem__core">
-              <span class="ecosystem__core-label">MADOSINC</span>
+              <picture>
+                <source srcset="images/madosinc-icon.png" type="image/png">
+                <img src="images/madosinc-mark.svg" alt="" class="ecosystem__core-logo" width="40" height="40">
+              </picture>
             </div>
             <div class="ecosystem__node ecosystem__node--people" data-label="People">
               <span class="ecosystem__icon">
@@ -665,7 +673,12 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <p class="footer__name">MADOSINC</p>
+        <a href="#" aria-label="Madosinc home">
+          <picture>
+            <source srcset="images/madosinc-logo.png" type="image/png">
+            <img src="images/madosinc-wordmark.svg" alt="Madosinc" class="footer__logo" width="160" height="40">
+          </picture>
+        </a>
         <p class="footer__tagline">Official Notion Certified Consultancy</p>
       </div>
       <nav class="footer__nav" aria-label="Footer">
