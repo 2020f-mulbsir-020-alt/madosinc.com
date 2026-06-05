@@ -46,11 +46,19 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="container hero__inner">
-        <div class="hero__certifications fade-in">
-          <img src="images/official-certified-by-notion.png" alt="Official Notion certifications including Academy Essentials, Advanced, Workflows, AI, Certified Admin, Service Specialist, and Consulting Partner" class="hero__certifications-img" width="900" height="120">
-        </div>
+      <div class="hero__logo-float fade-in" aria-hidden="true">
+        <img
+          class="hero__logo"
+          src="images/madosinc-hero-logo.png"
+          alt=""
+          width="480"
+          height="480"
+          decoding="async"
+        >
+      </div>
+      <div class="container hero__grid">
         <div class="hero__content fade-in">
+          <p class="label">Notion Certified Consultancy</p>
           <h1 id="hero-heading">
             Build Systems.<br>
             Streamline Operations.<br>
@@ -65,6 +73,7 @@
           </div>
           <ul class="hero__trust" aria-label="Trust indicators">
             <li><strong>120+</strong> Successful Projects</li>
+            <li><strong>Global</strong> Clients</li>
             <li><strong>Certified</strong> Expertise</li>
           </ul>
         </div>
@@ -72,7 +81,14 @@
           <div class="ecosystem">
             <div class="ecosystem__grid"></div>
             <div class="ecosystem__core">
-              <img class="ecosystem__logo" src="images/madosinc-hero-logo.png" alt="Madosinc" width="64" height="64">
+              <img
+                class="ecosystem__logo"
+                src="images/madosinc-hero-logo.png"
+                alt="Madosinc"
+                width="120"
+                height="120"
+                decoding="async"
+              >
             </div>
             <div class="ecosystem__node ecosystem__node--people" data-label="People">
               <span class="ecosystem__icon">
@@ -124,18 +140,15 @@
     </section>
 
     <section class="trust section--compact" aria-labelledby="trust-heading">
-      <div class="container trust__inner">
+      <div class="container">
         <h2 id="trust-heading" class="trust__heading fade-in">Trusted By Growing Teams Worldwide</h2>
-        <div class="trust__clients fade-in">
-          <img src="images/globally-clients.png" alt="Global clients including government, professional services, advisory, and operations organizations" class="trust__clients-img" width="900" height="120">
-        </div>
-        <ul class="trust__categories fade-in" aria-label="Client categories">
-          <li>Startups</li>
-          <li>SMEs</li>
-          <li>Nonprofits</li>
-          <li>Professional Services</li>
-          <li>Educational Institutions</li>
-          <li>Global Teams</li>
+        <ul class="trust__logos fade-in" aria-label="Client categories">
+          <li class="trust__logo"><span class="trust__monogram">ST</span><span>Startups</span></li>
+          <li class="trust__logo"><span class="trust__monogram">SM</span><span>SMEs</span></li>
+          <li class="trust__logo"><span class="trust__monogram">NP</span><span>Nonprofits</span></li>
+          <li class="trust__logo"><span class="trust__monogram">PS</span><span>Professional Services</span></li>
+          <li class="trust__logo"><span class="trust__monogram">ED</span><span>Educational Institutions</span></li>
+          <li class="trust__logo"><span class="trust__monogram">GT</span><span>Global Teams</span></li>
         </ul>
       </div>
     </section>
@@ -143,10 +156,8 @@
     <section class="section" id="about" aria-labelledby="about-heading">
       <div class="container about__grid">
         <div class="about__content fade-in">
-          <header class="section__header section__header--center">
-            <p class="label">About Madosinc</p>
-            <h2 id="about-heading">Your Operations Should Work Together.</h2>
-          </header>
+          <p class="label">About Madosinc</p>
+          <h2 id="about-heading">Your Operations Should Work Together.</h2>
           <p class="about__text">
             Madosinc helps organizations design, implement, and optimize digital operating systems using Notion. From workflow discovery and solution architecture to migration, automation, training, and long-term support, we create systems that scale with your business.
           </p>
@@ -191,7 +202,7 @@
 
     <section class="section section--light" id="solutions" aria-labelledby="solutions-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header fade-in">
           <p class="label">Solutions</p>
           <h2 id="solutions-heading">End-to-End Operational Transformation</h2>
           <p class="section__lead">From discovery to optimization, we deliver structured systems that connect people, processes, and technology.</p>
@@ -219,7 +230,7 @@
 
     <section class="section" id="services" aria-labelledby="services-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header fade-in">
           <p class="label">Services</p>
           <h2 id="services-heading">Comprehensive Delivery Capabilities</h2>
         </header>
@@ -321,7 +332,7 @@
 
     <section class="section" id="case-studies" aria-labelledby="cases-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header fade-in">
           <p class="label">Case Studies</p>
           <h2 id="cases-heading">Real Systems. Real Impact.</h2>
         </header>
@@ -529,7 +540,7 @@
 
     <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header fade-in">
           <p class="label">Testimonials</p>
           <h2 id="testimonials-heading">What Our Clients Say</h2>
         </header>
