@@ -257,6 +257,17 @@ a {
   background: var(--beige);
 }
 
+.section--white {
+  background: var(--white);
+}
+
+.section__lead {
+  margin-top: 0.875rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--stone);
+}
+
 .section__header {
   margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
 }
@@ -557,27 +568,125 @@ a {
   color: var(--charcoal);
 }
 
-/* Logos */
-.logos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
+/* Media showcases — certifications & integrations */
+.media-showcase {
+  margin: 0;
+  text-align: center;
+}
+
+.media-showcase + .media-showcase {
+  margin-top: 2rem;
+}
+
+.media-showcase img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+.media-showcase figcaption {
+  margin-top: 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--stone);
+}
+
+.media-showcase--dark {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--ink);
+  border-radius: var(--radius);
+}
+
+.media-showcase--dark img {
+  max-width: 28rem;
+}
+
+.media-showcase--dark figcaption {
+  color: var(--mist);
+}
+
+.media-showcase--light {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* Clients worldwide */
+.clients-showcase {
   margin-bottom: 3rem;
 }
 
-.logo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3.25rem;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--mist);
+.clients-showcase__logos {
+  margin: 0 0 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  text-align: center;
+}
+
+.clients-showcase__logos img {
+  display: block;
+  width: 100%;
+  max-width: 52rem;
+  height: auto;
+  margin-inline: auto;
+}
+
+.clients-showcase__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.clients-showcase__item {
+  padding: 1.25rem 1.5rem;
   background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.clients-showcase__item strong {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.clients-showcase__item span {
+  font-size: 0.875rem;
+  color: var(--stone);
+}
+
+.clients-showcase__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 1.5rem;
+  background: var(--ink);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.clients-showcase__stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.clients-showcase__stat-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--mist);
 }
 
 /* Cases */
@@ -1039,8 +1148,8 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .logos {
-    grid-template-columns: repeat(6, 1fr);
+  .clients-showcase__list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1143,7 +1252,4 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .logos {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
