@@ -6,68 +6,111 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  var toggle = document.querySelector(".nav__toggle");
-  var menu = document.getElementById("nav-menu");
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 40);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
 
-  if (toggle && menu) {
-    toggle.addEventListener("click", function () {
-      var open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      menu.classList.toggle("is-open", !open);
+  var navToggle = document.getElementById("nav-toggle");
+  if (navToggle) {
+    navToggle.addEventListener("change", function () {
+      document.body.style.overflow = navToggle.checked ? "hidden" : "";
     });
 
-    menu.querySelectorAll("a").forEach(function (link) {
+    document.querySelectorAll(".header__nav a, .header__actions a").forEach(function (link) {
       link.addEventListener("click", function () {
-        toggle.setAttribute("aria-expanded", "false");
-        menu.classList.remove("is-open");
+        navToggle.checked = false;
+        document.body.style.overflow = "";
       });
     });
   }
 
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (!prefersReduced && "IntersectionObserver" in window) {
+  if ("IntersectionObserver" in window) {
     var fadeEls = document.querySelectorAll(".fade-in");
-    var observer = new IntersectionObserver(
+    var fadeObserver = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
+            fadeObserver.unobserve(entry.target);
           }
         });
       },
-      { root: null, rootMargin: "0px 0px -8% 0px", threshold: 0.1 }
+      { root: null, rootMargin: "0px 0px -6% 0px", threshold: 0.08 }
     );
+
     fadeEls.forEach(function (el) {
-      observer.observe(el);
+      if (prefersReduced) {
+        el.classList.add("is-visible");
+      } else {
+        fadeObserver.observe(el);
+      }
+    });
+
+    var counters = document.querySelectorAll("[data-count]");
+    var counterObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          var target = parseInt(el.getAttribute("data-count"), 10);
+          var suffix = el.getAttribute("data-suffix") || "";
+          if (prefersReduced) {
+            el.textContent = target + suffix;
+          } else {
+            animateCounter(el, target, suffix);
+          }
+          counterObserver.unobserve(el);
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    counters.forEach(function (el) {
+      counterObserver.observe(el);
     });
   } else {
     document.querySelectorAll(".fade-in").forEach(function (el) {
       el.classList.add("is-visible");
     });
+    document.querySelectorAll("[data-count]").forEach(function (el) {
+      el.textContent = el.getAttribute("data-count") + (el.getAttribute("data-suffix") || "");
+    });
   }
 
-  var form = document.querySelector(".contact__form");
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      var status = form.querySelector(".form-status");
-      if (!status) return;
+  function animateCounter(el, target, suffix) {
+    var duration = 1600;
+    var start = performance.now();
 
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        status.hidden = false;
-        status.textContent = "Please fill in all required fields.";
-        status.className = "form-status form-status--error";
-        return;
+    function step(now) {
+      var progress = Math.min((now - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
       }
+    }
 
-      if (form.getAttribute("action").includes("YOUR_FORM")) {
-        event.preventDefault();
-        status.hidden = false;
-        status.textContent =
-          "Configure your Formspree endpoint in index.html (form action URL).";
-        status.className = "form-status form-status--error";
+    requestAnimationFrame(step);
+  }
+
+  var newsletter = document.querySelector(".footer__newsletter");
+  if (newsletter) {
+    newsletter.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var input = newsletter.querySelector("input[type='email']");
+      if (input && input.value) {
+        input.value = "";
+        input.placeholder = "Thank you for subscribing!";
+        setTimeout(function () {
+          input.placeholder = "you@company.com";
+        }, 3000);
       }
     });
   }
