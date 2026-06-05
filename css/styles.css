@@ -557,14 +557,21 @@ textarea {
   line-height: 1.4;
 }
 
-/* Partnership
+/* Partnership & Certifications
    -------------------------------------------------------------------------- */
 
-.partnership {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: clamp(2.5rem, 5vw, 5rem);
-  align-items: center;
+.partnership__intro {
+  max-width: 42rem;
+  margin-bottom: 3.5rem;
+}
+
+.partnership__intro h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.375rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
 }
 
 .partnership__text {
@@ -577,18 +584,99 @@ textarea {
   margin-bottom: 0;
 }
 
-.partnership__badge {
+.certifications {
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  overflow-x: auto;
+}
+
+.certifications img {
+  width: 100%;
+  min-width: 36rem;
+  height: auto;
+  margin-inline: auto;
+}
+
+/* Integrations
+   -------------------------------------------------------------------------- */
+
+.section__lead {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-top: 1rem;
+}
+
+.integrations__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+}
+
+.integration-visual {
+  margin: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem;
-  border: 1px solid var(--color-border);
+  padding: clamp(2rem, 4vw, 3rem);
+  background: var(--color-bg);
+  transition: background var(--transition-fast);
+}
+
+.integration-visual:hover {
   background: var(--color-surface);
 }
 
-.partnership__badge img {
-  max-width: 280px;
-  opacity: 0.95;
+.integration-visual img {
+  width: 100%;
+  max-width: 28rem;
+  height: auto;
+}
+
+.integration-visual--light {
+  background: var(--color-surface);
+}
+
+.integration-visual--light:hover {
+  background: #1e1e1e;
+}
+
+.integration-visual figcaption {
+  margin-top: 1.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Clients
+   -------------------------------------------------------------------------- */
+
+.clients__logos {
+  margin: 0;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  overflow-x: auto;
+}
+
+.clients__logos img {
+  width: 100%;
+  min-width: 32rem;
+  height: auto;
+  margin-inline: auto;
+  opacity: 0.92;
+  transition: opacity var(--transition-fast);
+}
+
+.clients__logos:hover img {
+  opacity: 1;
 }
 
 /* Case Studies
@@ -779,14 +867,8 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .partnership {
+  .integrations__grid {
     grid-template-columns: 1fr;
-  }
-
-  .partnership__badge {
-    max-width: 24rem;
-    margin-inline: auto;
-    width: 100%;
   }
 }
 
