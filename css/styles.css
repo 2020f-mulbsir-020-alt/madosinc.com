@@ -155,6 +155,11 @@ textarea {
     transform: none;
     animation: none;
   }
+
+  .section--shine::after,
+  .services-showcase {
+    animation: none;
+  }
 }
 
 /* Header
@@ -451,6 +456,65 @@ textarea {
   pointer-events: none;
 }
 
+.section--shine {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.section--shine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(214, 211, 204, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(214, 211, 204, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section--shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.02) 35%,
+    rgba(214, 211, 204, 0.07) 50%,
+    rgba(255, 255, 255, 0.02) 65%,
+    transparent 100%
+  );
+  animation: sectionShine 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes sectionShine {
+  0%, 100% {
+    left: -100%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    left: 150%;
+    opacity: 1;
+  }
+  60%, 100% {
+    opacity: 0;
+  }
+}
+
+.section--shine > .container {
+  position: relative;
+  z-index: 1;
+}
+
 /* About
    -------------------------------------------------------------------------- */
 
@@ -586,50 +650,120 @@ textarea {
   border-radius: 50%;
 }
 
-/* Services Grid
+/* Services — Highlighted Capabilities
    -------------------------------------------------------------------------- */
 
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services__header {
+  max-width: 40rem;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+}
+
+.services-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 68rem;
+  margin-inline: auto;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(214, 211, 204, 0.22) 0%,
+    rgba(214, 211, 204, 0.05) 35%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(214, 211, 204, 0.05) 65%,
+    rgba(214, 211, 204, 0.22) 100%
+  );
+  background-size: 200% 200%;
+  animation: borderShine 6s ease infinite;
+}
+
+@keyframes borderShine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.services-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(214, 211, 204, 0.06) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(214, 211, 204, 0.04) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
 .services-grid {
+  position: relative;
+  z-index: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 1px;
   background: var(--color-border);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(214, 211, 204, 0.15);
+  margin: 0;
 }
 
 .service-card {
-  background: var(--color-surface);
-  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #1e1e1e 0%,
+    var(--color-surface) 100%
+  );
+  padding: 2rem 1.25rem;
+  min-height: 9.5rem;
   transition:
     background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .service-card:hover {
-  background: #1e1e1e;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-
-.service-card--highlight {
-  border-top: 2px solid var(--color-accent);
-}
-
-.service-card--highlight h3 {
-  color: var(--color-accent);
+  background: linear-gradient(
+    180deg,
+    #242424 0%,
+    #1c1c1c 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(214, 211, 204, 0.12),
+    0 0 20px rgba(214, 211, 204, 0.06);
+  transform: translateY(-2px);
 }
 
 .service-card h3 {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--color-text);
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
   margin-bottom: 0.75rem;
+  text-transform: uppercase;
 }
 
 .service-card p {
-  font-size: 0.875rem;
-  line-height: 1.65;
+  font-size: 0.8125rem;
+  line-height: 1.6;
   color: var(--color-text-muted);
+  max-width: 14rem;
+  margin-inline: auto;
 }
 
 /* Process Timeline
@@ -1213,6 +1347,10 @@ textarea {
     margin-inline: auto;
   }
 
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .process-timeline {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 3rem;
@@ -1348,6 +1486,12 @@ textarea {
     gap: 1.5rem;
   }
 
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
   .services-grid {
     grid-template-columns: 1fr;
   }
