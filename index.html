@@ -8,23 +8,26 @@
   <meta property="og:title" content="Madosinc | Official Notion Certified Company">
   <meta property="og:description" content="Building Systems That Scale Businesses. Official Notion Certified workflow architecture and enterprise implementation.">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="color-scheme" content="dark">
   <title>Madosinc | Official Notion Certified Company</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/madosinc-logo.png" type="image/png">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" role="banner">
     <div class="container header__inner">
-      <a class="header__brand-link" href="#">
+      <a class="header__brand-link" href="#" aria-label="Madosinc — return to top">
         <img
           class="header__logo"
           src="images/madosinc-logo.png"
-          alt=""
+          alt="Madosinc logo"
           width="40"
           height="40"
           decoding="async"
@@ -34,12 +37,12 @@
           <span class="header__label">Official Notion Certified Company</span>
         </div>
       </a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" tabindex="-1">
+      <label for="nav-toggle" class="nav-toggle-label" aria-controls="primary-nav" aria-expanded="false">
         <span></span>
         <span></span>
       </label>
-      <nav class="header__nav" aria-label="Primary">
+      <nav class="header__nav" id="primary-nav" aria-label="Primary">
         <a href="#offerings">Offerings</a>
         <a href="#services">Services</a>
         <a href="#reviews">Reviews</a>
@@ -61,7 +64,7 @@
         >
         <h1 id="hero-heading">Building Systems That Scale Businesses.</h1>
         <p class="hero__subtext">
-          Madosinc is an Official Notion Certified Company specializing in workflow architecture, business process optimization, and enterprise-grade system implementation.
+          Official Notion Certified consultants designing workflow systems, process optimization, and enterprise-grade implementations for modern organizations.
         </p>
         <ul class="hero__badges" aria-label="Credentials">
           <li>Official Notion Certified Partner</li>
@@ -77,19 +80,19 @@
 
     <section class="section" id="about" aria-labelledby="about-heading">
       <div class="container about">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header section__header--center reveal">
           <p class="label">About</p>
           <h2 id="about-heading">Systems Thinking for Operational Excellence</h2>
         </header>
-        <div class="about__body fade-in">
+        <div class="about__body reveal">
           <p class="about__text">
-            Modern organizations operate across fragmented tools, disconnected teams, and undocumented processes. Operational friction compounds as companies scale — creating visibility gaps, duplicated effort, and inconsistent execution.
+            Growing teams lose time to fragmented tools, disconnected workflows, and unclear processes. The result: duplicated work, poor visibility, and inconsistent execution.
           </p>
           <p class="about__text">
-            Madosinc designs structured operating systems inside Notion. We architect workflows with clarity, scalability, and automation readiness at the core — enabling leadership teams to govern operations with precision and teams to execute with confidence.
+            Madosinc builds structured operating systems in Notion — designed for clarity, scale, and automation. Leaders gain control. Teams gain confidence.
           </p>
         </div>
-        <div class="about__panel fade-in" aria-hidden="true">
+        <div class="about__panel reveal" role="presentation">
           <div class="about__panel-grid">
             <span>Clarity</span>
             <span>Scalability</span>
@@ -102,15 +105,15 @@
 
     <section class="section section--layer section--highlight" id="offerings" aria-labelledby="offerings-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header section__header--center reveal">
           <p class="label">What We Offer</p>
           <h2 id="offerings-heading">Enterprise Notion Solutions</h2>
           <p class="section__intro">
-            Certified implementation services aligned with Notion best practices — from accelerated workspace launch to complex migrations and ongoing optimization.
+            Certified services built on Notion best practices — from workspace launch and workflow design to migration, integration, and ongoing support.
           </p>
         </header>
-        <ul class="offerings-grid">
-          <li class="offering-card offering-card--featured fade-in">
+        <ul class="offerings-grid reveal">
+          <li class="offering-card offering-card--featured">
             <span class="offering-card__tag">Core Offering</span>
             <h3>Accelerated Launch</h3>
             <ul class="offering-card__list">
@@ -119,7 +122,7 @@
               <li>Drive adoption with tailored enablement and change management — persona-based training and rollout plans that build an engaged user community.</li>
             </ul>
           </li>
-          <li class="offering-card offering-card--featured fade-in">
+          <li class="offering-card offering-card--featured">
             <span class="offering-card__tag">Core Offering</span>
             <h3>Workflow Implementation</h3>
             <ul class="offering-card__list">
@@ -128,7 +131,7 @@
               <li>Provide workflow enablement to ensure confident adoption, ongoing ownership, and measurable outcomes over time.</li>
             </ul>
           </li>
-          <li class="offering-card offering-card--featured fade-in">
+          <li class="offering-card offering-card--featured">
             <span class="offering-card__tag">Core Offering</span>
             <h3>Technical Advisory &amp; Migrations</h3>
             <ul class="offering-card__list">
@@ -143,52 +146,52 @@
 
     <section class="section section--layer section--shine services-section" id="services" aria-labelledby="services-heading">
       <div class="container services">
-        <header class="services__header section__header section__header--center fade-in">
+        <header class="services__header section__header section__header--center reveal">
           <p class="label">Capabilities</p>
           <h2 id="services-heading">Full-Service Delivery</h2>
           <p class="section__intro">
-            End-to-end project types available across global regions — from discovery through deployment and ongoing support.
+            Ten delivery capabilities spanning discovery, implementation, integration, training, and long-term system support.
           </p>
         </header>
-        <div class="services-showcase fade-in">
+        <div class="services-showcase reveal">
           <ul class="services-grid">
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Workflow Discovery</h3>
               <p>Analyze existing business processes and identify inefficiencies.</p>
             </li>
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Workflow Implementation</h3>
               <p>Build structured, scalable Notion-based systems.</p>
             </li>
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Solution Implementation</h3>
               <p>Deploy complete operational systems across teams.</p>
             </li>
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Integration Systems</h3>
               <p>Connect tools, databases, and workflows seamlessly.</p>
             </li>
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Migration Services</h3>
               <p>Move teams from legacy tools to Notion ecosystems.</p>
             </li>
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Change Management</h3>
               <p>Ensure smooth adoption of new systems across organizations.</p>
             </li>
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Custom Training</h3>
               <p>Train teams on Notion workflows and productivity systems.</p>
             </li>
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Ongoing Support</h3>
               <p>Continuous system optimization and improvements.</p>
             </li>
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Project Management Systems</h3>
               <p>Design structured project execution frameworks.</p>
             </li>
-            <li class="service-card fade-in">
+            <li class="service-card">
               <h3>Custom Templates</h3>
               <p>Enterprise-ready Notion templates tailored to operations.</p>
             </li>
@@ -199,11 +202,11 @@
 
     <section class="section section--layer" id="work" aria-labelledby="process-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header section__header--center reveal">
           <p class="label">Methodology</p>
           <h2 id="process-heading">How We Work</h2>
         </header>
-        <ol class="process-timeline fade-in">
+        <ol class="process-timeline reveal">
           <li class="process-step">
             <span class="process-step__num">01</span>
             <h3>Diagnose Current Systems</h3>
@@ -230,37 +233,37 @@
 
     <section class="section metrics" id="impact" aria-labelledby="metrics-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header section__header--center reveal">
           <p class="label">Impact</p>
           <h2 id="metrics-heading">Measurable Operational Outcomes</h2>
           <p class="section__intro">
-            A track record of structured delivery — from system architecture through organization-wide transformation and sustained efficiency gains.
+            Delivered results across system design, organizational transformation, and measurable efficiency improvement.
           </p>
         </header>
-        <ol class="metrics-flow fade-in">
+        <ol class="metrics-flow reveal">
           <li class="metric">
             <span class="metric__step" aria-hidden="true">01</span>
             <span class="metric__value">200+</span>
             <span class="metric__label">Workflow Systems Built</span>
-            <span class="metric__desc">Structured Notion architectures designed and deployed across diverse operational environments.</span>
+            <span class="metric__desc">Notion systems designed and deployed for teams across multiple industries.</span>
           </li>
           <li class="metric">
             <span class="metric__step" aria-hidden="true">02</span>
             <span class="metric__value">50+</span>
             <span class="metric__label">Organizations Transformed</span>
-            <span class="metric__desc">Teams and enterprises guided through workflow redesign, migration, and system adoption.</span>
+            <span class="metric__desc">Companies supported through workflow redesign, migration, and adoption.</span>
           </li>
           <li class="metric">
             <span class="metric__step" aria-hidden="true">03</span>
             <span class="metric__value">10,000+</span>
             <span class="metric__label">Hours of Operational Time Saved</span>
-            <span class="metric__desc">Documented reduction in manual processes, duplicated effort, and operational overhead.</span>
+            <span class="metric__desc">Less manual work, fewer duplicated tasks, and lower operational overhead.</span>
           </li>
           <li class="metric metric--accent">
             <span class="metric__step" aria-hidden="true">04</span>
             <span class="metric__value">95%</span>
             <span class="metric__label">Process Efficiency Increase</span>
-            <span class="metric__desc">Average improvement in workflow clarity, execution speed, and cross-team alignment.</span>
+            <span class="metric__desc">Clearer workflows, faster execution, and stronger alignment across teams.</span>
           </li>
         </ol>
       </div>
@@ -268,19 +271,19 @@
 
     <section class="section section--layer" id="solutions" aria-labelledby="partnership-heading">
       <div class="container partnership">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header section__header--center reveal">
           <p class="label">Partnership</p>
           <h2 id="partnership-heading">Official Notion Ecosystem Partner</h2>
         </header>
-        <div class="partnership__body fade-in">
+        <div class="partnership__body reveal">
           <p class="partnership__text">
-            Madosinc operates within the official Notion partner ecosystem — aligned with certified standards for workspace architecture, implementation methodology, and enterprise delivery practices.
+            Madosinc is part of the official Notion partner ecosystem — certified in workspace architecture, implementation standards, and enterprise delivery.
           </p>
           <p class="partnership__text">
-            Our engagements follow rigorous best practices in database design, permission governance, integration architecture, and change management. Every system we deliver meets the operational standards expected of enterprise-grade Notion implementations.
+            Every engagement follows best practices in database design, permissions, integrations, and change management — built to enterprise operational standards.
           </p>
         </div>
-        <figure class="partnership__badges fade-in">
+        <figure class="partnership__badges reveal">
           <img
             src="images/official-certified-by-notion.png"
             alt="Official Notion certifications: Academy Essentials, Advanced, Workflows, AI, Certified Admin, Service Specialist, and Consulting Partner"
@@ -296,15 +299,15 @@
 
     <section class="section" id="reviews" aria-labelledby="reviews-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header section__header--center reveal">
           <p class="label">Client Reviews</p>
           <h2 id="reviews-heading">Trusted by Organizations Worldwide</h2>
           <p class="section__intro">
             Feedback from enterprise clients on the outcomes of our workflow architecture and implementation engagements.
           </p>
         </header>
-        <ul class="reviews-grid">
-          <li class="review-card fade-in">
+        <ul class="reviews-grid reveal">
+          <li class="review-card">
             <div class="review-card__stars" aria-label="5 out of 5 stars">
               <span aria-hidden="true">★★★★★</span>
             </div>
@@ -316,7 +319,7 @@
               <span class="review-card__role">Operations Director, TechScale Ventures</span>
             </footer>
           </li>
-          <li class="review-card fade-in">
+          <li class="review-card">
             <div class="review-card__stars" aria-label="5 out of 5 stars">
               <span aria-hidden="true">★★★★★</span>
             </div>
@@ -328,7 +331,7 @@
               <span class="review-card__role">Head of Operations, Meridian Digital</span>
             </footer>
           </li>
-          <li class="review-card fade-in">
+          <li class="review-card">
             <div class="review-card__stars" aria-label="5 out of 5 stars">
               <span aria-hidden="true">★★★★★</span>
             </div>
@@ -340,7 +343,7 @@
               <span class="review-card__role">Project Lead, Northstar Systems</span>
             </footer>
           </li>
-          <li class="review-card fade-in">
+          <li class="review-card">
             <div class="review-card__stars" aria-label="5 out of 5 stars">
               <span aria-hidden="true">★★★★★</span>
             </div>
@@ -352,7 +355,7 @@
               <span class="review-card__role">VP of Strategy, Apex Collective</span>
             </footer>
           </li>
-          <li class="review-card fade-in">
+          <li class="review-card">
             <div class="review-card__stars" aria-label="5 out of 5 stars">
               <span aria-hidden="true">★★★★★</span>
             </div>
@@ -370,24 +373,24 @@
 
     <section class="section" id="case-studies" aria-labelledby="cases-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header section__header--center reveal">
           <p class="label">Case Studies</p>
           <h2 id="cases-heading">Proven Enterprise Outcomes</h2>
         </header>
-        <ul class="cases-grid">
-          <li class="case-card fade-in">
+        <ul class="cases-grid reveal">
+          <li class="case-card">
             <h3>Corporate Workflow Redesign</h3>
             <p>Unified cross-departmental workflows, reducing operational friction by 40% and establishing governed execution standards across the organization.</p>
           </li>
-          <li class="case-card fade-in">
+          <li class="case-card">
             <h3>Multi-Team Notion Migration</h3>
             <p>Structured migration from legacy project tools to a centralized Notion operating system, preserving data integrity across 6 teams and 2,400+ records.</p>
           </li>
-          <li class="case-card fade-in">
+          <li class="case-card">
             <h3>Enterprise Knowledge System Build</h3>
             <p>Architected institutional knowledge infrastructure with taxonomy, linked databases, and retrieval optimization — improving knowledge access by 85%.</p>
           </li>
-          <li class="case-card fade-in">
+          <li class="case-card">
             <h3>Startup Scaling Infrastructure</h3>
             <p>Designed scalable operational foundations enabling rapid team growth from 15 to 80 members without structural rework or process degradation.</p>
           </li>
@@ -397,11 +400,11 @@
 
     <section class="section trust" id="trust" aria-labelledby="trust-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header section__header--center reveal">
           <p class="label">Why Madosinc</p>
           <h2 id="trust-heading">Built on Expertise. Backed by Trust.</h2>
         </header>
-        <ul class="trust-grid fade-in">
+        <ul class="trust-grid reveal">
           <li class="trust-card">
             <h3>Official Notion Certified Company</h3>
             <p>Certified within the Notion partner ecosystem with verified credentials across Academy, Admin, and Consulting Partner standards.</p>
@@ -424,15 +427,16 @@
 
     <section class="section section--layer contact-section" id="contact" aria-labelledby="contact-heading">
       <div class="container contact">
-        <header class="contact__header section__header--center fade-in">
+        <header class="contact__header section__header--center reveal">
           <p class="label">Consultation</p>
           <h2 id="contact-heading">Request a Project Consultation</h2>
           <p class="section__intro">
-            Share your operational objectives and our certified consultants will review your inquiry and respond promptly with tailored guidance.
+            Tell us about your goals. A certified Madosinc consultant will review your request and respond with tailored next steps.
           </p>
         </header>
         <form
-          class="inquiry-form fade-in"
+          class="inquiry-form reveal"
+          aria-label="Project consultation request form"
           action="https://formsubmit.co/contact@madosinc.com"
           method="POST"
         >
@@ -446,8 +450,8 @@
             <legend class="inquiry-form__legend">Contact Information</legend>
             <div class="inquiry-form__grid">
               <div class="form-field">
-                <label class="label" for="name">Full Name</label>
-                <input type="text" id="name" name="Full Name" required autocomplete="name" placeholder="Full name">
+                <label class="label" for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="Full Name" required autocomplete="name" placeholder="Full name" aria-required="true">
               </div>
               <div class="form-field">
                 <label class="label" for="company">Company Name</label>
@@ -537,11 +541,11 @@
 
     <section class="section founders" id="team" aria-labelledby="founders-heading">
       <div class="container">
-        <header class="section__header section__header--center fade-in">
+        <header class="section__header section__header--center reveal">
           <p class="label">Leadership</p>
           <h2 id="founders-heading">Meet the Founders</h2>
         </header>
-        <div class="founders__row fade-in">
+        <div class="founders__row reveal">
           <article class="founder-card">
             <div class="founder-card__photo">
               <img
@@ -587,7 +591,7 @@
         <img
           class="footer__logo"
           src="images/madosinc-logo.png"
-          alt=""
+          alt="Madosinc logo"
           width="48"
           height="48"
           loading="lazy"
